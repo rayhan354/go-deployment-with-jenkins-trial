@@ -1,0 +1,920 @@
+Script started on 2026-09-02 17:45:09+07:00 [TERM="xterm-256color" COLUMNS="135" LINES="30"]
+]0;rayhan354@archlinux-rayhan354:/mnt/sdd1/Tes PT Simple Journey Indonesia/shift-test[?2004h[rayhan354@archlinux-rayhan354 shift-test]$ exit
+[?2004lexit
+
+Script done on 2026-09-02 17:45:19+07:00 [COMMAND_EXIT_CODE="0"]
+Script started on 2026-09-02 17:45:35+07:00 [TERM="xterm-256color" COLUMNS="135" LINES="30"]
+]0;rayhan354@archlinux-rayhan354:/mnt/sdd1/Tes PT Simple Journey Indonesia/shift-test[?2004h[rayhan354@archlinux-rayhan354 shift-test]$ [7mdocker build --build-arg VERSION=1.0.0 -t myapp:1.0.0 .[27m
+[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cdocker build --build-arg VERSION=1.0.0 -t myapp:1.0.0 .
+[A
+[?2004lDEPRECATED: The legacy builder is deprecated and will be removed in a future release.
+            Install the buildx component to build images with BuildKit:
+            https://docs.docker.com/go/buildx/
+
+Sending build context to Docker daemon  4.608kB
+Step 1/10 : FROM golang:1.21-alpine AS builder
+ ---> c2321c7cf721
+Step 2/10 : ENV CGO_ENABLED=0     GOOS=linux     GOARCH=amd64
+ ---> Using cache
+ ---> 1ab684874eca
+Step 3/10 : WORKDIR /app
+ ---> Using cache
+ ---> aeed847ebf3b
+Step 4/10 : COPY main.go .
+ ---> Using cache
+ ---> 23c384820c36
+Step 5/10 : ARG VERSION=dev
+ ---> Using cache
+ ---> a8bac4dff52b
+Step 6/10 : RUN go build -ldflags="-X main.version=${VERSION}" -o app .
+ ---> Running in f535b93bd07e
+[91mgo: go.mod file not found in current directory or any parent directory; see 'go help modules'
+[0mThe command '/bin/sh -c go build -ldflags="-X main.version=${VERSION}" -o app .' returned a non-zero code: 1
+]0;rayhan354@archlinux-rayhan354:/mnt/sdd1/Tes PT Simple Journey Indonesia/shift-test[?2004h[rayhan354@archlinux-rayhan354 shift-test]$ docker build --build-arg VERSION=1.0.0 -t myapp:1.0.0 .[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[7mdocker network prune[27mdocker network prune
+[?2004lWARNING! This will remove all custom networks not used by at least one container.
+Are you sure you want to continue? [y/N] y
+Deleted Networks:
+winboat_default
+
+]0;rayhan354@archlinux-rayhan354:/mnt/sdd1/Tes PT Simple Journey Indonesia/shift-test[?2004h[rayhan354@archlinux-rayhan354 shift-test]$ docker network prune
+[?2004lWARNING! This will remove all custom networks not used by at least one container.
+Are you sure you want to continue? [y/N] y
+]0;rayhan354@archlinux-rayhan354:/mnt/sdd1/Tes PT Simple Journey Indonesia/shift-test[?2004h[rayhan354@archlinux-rayhan354 shift-test]$ [7msudo systemctl restart docker[27msudo systemctl restart docker
+[?2004l[sudo] password for rayhan354: 
+]3008;start=48b986a27baa41c5af428db8ba698ae2;user=rayhan354;hostname=archlinux-rayhan354;machineid=5ad9b462fcad4429abb6329199b5f486;bootid=515d013d25b643c8bc734b4611a0b586;pid=12490;pidfdid=21455;comm=sudo;targetuser=root;type=session\]3008;end=48b986a27baa41c5af428db8ba698ae2\]0;rayhan354@archlinux-rayhan354:/mnt/sdd1/Tes PT Simple Journey Indonesia/shift-test[?2004h[rayhan354@archlinux-rayhan354 shift-test]$ [7mdocker build --build-arg VERSION=1.0.0 -t myapp:1.0.0 .[27m
+[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cdocker build --build-arg VERSION=1.0.0 -t myapp:1.0.0 .
+[A
+[?2004lDEPRECATED: The legacy builder is deprecated and will be removed in a future release.
+            Install the buildx component to build images with BuildKit:
+            https://docs.docker.com/go/buildx/
+
+Sending build context to Docker daemon  4.608kB
+Step 1/10 : FROM golang:1.21-alpine AS builder
+ ---> c2321c7cf721
+Step 2/10 : ENV CGO_ENABLED=0     GOOS=linux     GOARCH=amd64
+ ---> Using cache
+ ---> 1ab684874eca
+Step 3/10 : WORKDIR /app
+ ---> Using cache
+ ---> aeed847ebf3b
+Step 4/10 : COPY main.go .
+ ---> Using cache
+ ---> 23c384820c36
+Step 5/10 : ARG VERSION=dev
+ ---> Using cache
+ ---> a8bac4dff52b
+Step 6/10 : RUN go build -ldflags="-X main.version=${VERSION}" -o app .
+ ---> Running in 34a8d99fa86e
+[91mgo: go.mod file not found in current directory or any parent directory; see 'go help modules'
+[0mThe command '/bin/sh -c go build -ldflags="-X main.version=${VERSION}" -o app .' returned a non-zero code: 1
+]0;rayhan354@archlinux-rayhan354:/mnt/sdd1/Tes PT Simple Journey Indonesia/shift-test[?2004h[rayhan354@archlinux-rayhan354 shift-test]$ [7mDOCKER_BUILDKIT=1 docker build --build-arg VERSION=1.0.0 -t myapp:1.0.0 .[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[CDOCKER_BUILDKIT=1 docker build --build-arg VERSION=1.0.0 -t myapp:1.0.0 .
+[?2004lERROR: BuildKit is enabled but the buildx component is missing or broken.
+       Install the buildx component to build images with BuildKit:
+       https://docs.docker.com/go/buildx/
+]0;rayhan354@archlinux-rayhan354:/mnt/sdd1/Tes PT Simple Journey Indonesia/shift-test[?2004h[rayhan354@archlinux-rayhan354 shift-test]$ [7mexport DOCKER_BUILDKIT=1[27mexport DOCKER_BUILDKIT=1
+[?2004l]0;rayhan354@archlinux-rayhan354:/mnt/sdd1/Tes PT Simple Journey Indonesia/shift-test[?2004h[rayhan354@archlinux-rayhan354 shift-test]$ [7mdocker build --build-arg VERSION=1.0.0 -t myapp:1.0.0 .[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cdocker build --build-arg VERSION=1.0.0 -t myapp:1.0.0 .
+[?2004lERROR: BuildKit is enabled but the buildx component is missing or broken.
+       Install the buildx component to build images with BuildKit:
+       https://docs.docker.com/go/buildx/
+]0;rayhan354@archlinux-rayhan354:/mnt/sdd1/Tes PT Simple Journey Indonesia/shift-test[?2004h[rayhan354@archlinux-rayhan354 shift-test]$ [7msudo pacman -S docker-buildx[27msudo pacman -S docker-buildx
+[?2004l[sudo] password for rayhan354: 
+]3008;start=af11be445401407d806170238412ce64;user=rayhan354;hostname=archlinux-rayhan354;machineid=5ad9b462fcad4429abb6329199b5f486;bootid=515d013d25b643c8bc734b4611a0b586;pid=25666;pidfdid=22756;comm=sudo;targetuser=root;type=session\[?25lresolving dependencies...
+looking for conflicting packages...
+
+Packages (1) docker-buildx-0.36.1-1
+
+Total Download Size:   16.82 MiB
+Total Installed Size:  62.52 MiB
+
+:: Proceed with installation? [Y/n] [?25hY
+[?25l:: Retrieving packages...
+ docker-buildx-0.36.1-1-x86_64
+[1F docker-buildx-0.36.1-1-x86_64                          0.0   B  0.00   B/s --:-- [----------------------------------------------]   0% docker-buildx-0.36.1-1-x86_64                        136.2 KiB   227 KiB/s 01:15 [----------------------------------------------]   0% docker-buildx-0.36.1-1-x86_64                        671.9 KiB  1044 KiB/s 00:15 [#---------------------------------------------]   3% docker-buildx-0.36.1-1-x86_64                          3.0 MiB  4.54 MiB/s 00:03 [#######---------------------------------------]  17% docker-buildx-0.36.1-1-x86_64                          6.8 MiB  9.39 MiB/s 00:01 [##################----------------------------]  40% docker-buildx-0.36.1-1-x86_64                         11.6 MiB  14.2 MiB/s 00:00 [###############################---------------]  68% docker-buildx-0.36.1-1-x86_64                         16.8 MiB  7.48 MiB/s 00:02 [##############################################] 100%[1E(0/1) checking keys in keyring                                                    [----------------------------------------------]   0%(1/1) checking keys in keyring                                                    [##############################################] 100%
+(0/1) checking package integrity                                                  [----------------------------------------------]   0%(1/1) checking package integrity                                                  [##############################################] 100%
+(0/1) loading package files                                                       [----------------------------------------------]   0%(1/1) loading package files                                                       [##############################################] 100%
+(0/1) checking for file conflicts                                                 [----------------------------------------------]   0%(1/1) checking for file conflicts                                                 [##############################################] 100%
+(0/1) checking available disk space                                               [----------------------------------------------]   0%(1/1) checking available disk space                                               [##############################################] 100%
+:: Processing package changes...
+(1/1) installing docker-buildx                                                    [----------------------------------------------]   0%(1/1) installing docker-buildx                                                    [----------------------------------------------]   0%(1/1) installing docker-buildx                                                    [----------------------------------------------]   0%(1/1) installing docker-buildx                                                    [----------------------------------------------]   0%(1/1) installing docker-buildx                                                    [----------------------------------------------]   0%(1/1) installing docker-buildx                                                    [----------------------------------------------]   0%(1/1) installing docker-buildx                                                    [----------------------------------------------]   0%(1/1) installing docker-buildx                                                    [----------------------------------------------]   0%(1/1) installing docker-buildx                                                    [----------------------------------------------]   0%(1/1) installing docker-buildx                                                    [##############################################] 100%
+:: Running post-transaction hooks...
+(1/1) Arming ConditionNeedsUpdate...
+[?25h]3008;end=af11be445401407d806170238412ce64\]0;rayhan354@archlinux-rayhan354:/mnt/sdd1/Tes PT Simple Journey Indonesia/shift-test[?2004h[rayhan354@archlinux-rayhan354 shift-test]$ [7msudo systemctl restart docker[27msudo systemctl restart docker
+[?2004l]3008;start=5a56fada40e6460894286117b1d158e0;user=rayhan354;hostname=archlinux-rayhan354;machineid=5ad9b462fcad4429abb6329199b5f486;bootid=515d013d25b643c8bc734b4611a0b586;pid=25897;pidfdid=22815;comm=sudo;targetuser=root;type=session\]3008;end=5a56fada40e6460894286117b1d158e0\]0;rayhan354@archlinux-rayhan354:/mnt/sdd1/Tes PT Simple Journey Indonesia/shift-test[?2004h[rayhan354@archlinux-rayhan354 shift-test]$ [7mdocker buildx version[27mdocker buildx version
+[?2004lgithub.com/docker/buildx 0.36.1 1d8dde89b8aba914e05e45366770736fea1fd690
+]0;rayhan354@archlinux-rayhan354:/mnt/sdd1/Tes PT Simple Journey Indonesia/shift-test[?2004h[rayhan354@archlinux-rayhan354 shift-test]$ [7mdocker info | grep -A 5 "Plugins"[27mdocker info | grep -A 5 "Plugins"
+[?2004l [01;31m[KPlugins[m[K:
+  buildx: Docker Buildx (Docker Inc.)
+    Version:  0.36.1
+    Path:     /usr/lib/docker/cli-plugins/docker-buildx
+  compose: Docker Compose (Docker Inc.)
+    Version:  5.5.0
+[36m[K--[m[K
+ [01;31m[KPlugins[m[K:
+  Volume: local
+  Network: bridge host ipvlan macvlan null overlay
+  Log: awslogs fluentd gcplogs gelf journald json-file local splunk syslog
+ CDI spec directories:
+  /etc/cdi
+]0;rayhan354@archlinux-rayhan354:/mnt/sdd1/Tes PT Simple Journey Indonesia/shift-test[?2004h[rayhan354@archlinux-rayhan354 shift-test]$ docker info | grep -A 5 "Plugins"[12Pbuildx versionsudo systemctl restart docker[1Ppacman -S docker-buildxdocker build --build-arg VERSION=1.0.0 -t myapp:1.0.0 .
+[?2004l[1A[1B[0G[?25l[+] Building 0.0s (0/1)                                                                                                 docker:default
+[?25h[1A[0G[?25l[+] Building 0.1s (3/10)                                                                                                docker:default
+[34m => [internal] load build definition from Dockerfile                                                                              0.0s
+[0m[34m => => transferring dockerfile: 451B                                                                                              0.0s
+[0m[34m => [internal] load metadata for docker.io/library/golang:1.21-alpine                                                             0.0s
+[0m[34m => [internal] load .dockerignore                                                                                                 0.0s
+[0m[34m => => transferring context: 2B                                                                                                   0.0s
+[0m => [builder 1/5] FROM docker.io/library/golang:1.21-alpine                                                                       0.0s
+ => [internal] load build context                                                                                                 0.0s
+ => => transferring context:                                                                                                      0.0s
+[?25h[1A[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Building 0.2s (7/10)                                                                                                docker:default
+[34m => [internal] load build definition from Dockerfile                                                                              0.0s
+[0m[34m => => transferring dockerfile: 451B                                                                                              0.0s
+[0m[34m => [internal] load metadata for docker.io/library/golang:1.21-alpine                                                             0.0s
+[0m[34m => [internal] load .dockerignore                                                                                                 0.0s
+[0m[34m => => transferring context: 2B                                                                                                   0.0s
+[0m[34m => [builder 1/5] FROM docker.io/library/golang:1.21-alpine                                                                       0.1s
+[0m[34m => [internal] load build context                                                                                                 0.1s
+[0m[34m => => transferring context: 356B                                                                                                 0.0s
+[0m[34m => [builder 2/5] WORKDIR /app                                                                                                    0.0s
+[0m[34m => [builder 3/5] COPY main.go .                                                                                                  0.0s
+[0m[?25h[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Building 0.4s (7/10)                                                                                                docker:default
+[34m => [internal] load build definition from Dockerfile                                                                              0.0s
+[0m[34m => => transferring dockerfile: 451B                                                                                              0.0s
+[0m[34m => [internal] load metadata for docker.io/library/golang:1.21-alpine                                                             0.0s
+[0m[34m => [internal] load .dockerignore                                                                                                 0.0s
+[0m[34m => => transferring context: 2B                                                                                                   0.0s
+[0m[34m => [builder 1/5] FROM docker.io/library/golang:1.21-alpine                                                                       0.1s
+[0m[34m => [internal] load build context                                                                                                 0.1s
+[0m[34m => => transferring context: 356B                                                                                                 0.0s
+[0m[34m => [builder 2/5] WORKDIR /app                                                                                                    0.0s
+[0m[34m => [builder 3/5] COPY main.go .                                                                                                  0.0s
+[0m => [builder 4/5] RUN go mod init app                                                                                             0.1s
+[2m => => # go: creating new go.mod: module app                                                                                          
+[0m[?25h[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Building 0.5s (8/10)                                                                                                docker:default
+[34m => [internal] load build definition from Dockerfile                                                                              0.0s
+[0m[34m => => transferring dockerfile: 451B                                                                                              0.0s
+[0m[34m => [internal] load metadata for docker.io/library/golang:1.21-alpine                                                             0.0s
+[0m[34m => [internal] load .dockerignore                                                                                                 0.0s
+[0m[34m => => transferring context: 2B                                                                                                   0.0s
+[0m[34m => [builder 1/5] FROM docker.io/library/golang:1.21-alpine                                                                       0.1s
+[0m[34m => [internal] load build context                                                                                                 0.1s
+[0m[34m => => transferring context: 356B                                                                                                 0.0s
+[0m[34m => [builder 2/5] WORKDIR /app                                                                                                    0.0s
+[0m[34m => [builder 3/5] COPY main.go .                                                                                                  0.0s
+[0m[34m => [builder 4/5] RUN go mod init app                                                                                             0.1s
+[0m => [builder 5/5] RUN go build -ldflags="-X main.version=1.0.0" -o app .                                                          0.2s
+[?25h[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Building 0.7s (8/10)                                                                                                docker:default
+[34m => [internal] load build definition from Dockerfile                                                                              0.0s
+[0m[34m => => transferring dockerfile: 451B                                                                                              0.0s
+[0m[34m => [internal] load metadata for docker.io/library/golang:1.21-alpine                                                             0.0s
+[0m[34m => [internal] load .dockerignore                                                                                                 0.0s
+[0m[34m => => transferring context: 2B                                                                                                   0.0s
+[0m[34m => [builder 1/5] FROM docker.io/library/golang:1.21-alpine                                                                       0.1s
+[0m[34m => [internal] load build context                                                                                                 0.1s
+[0m[34m => => transferring context: 356B                                                                                                 0.0s
+[0m[34m => [builder 2/5] WORKDIR /app                                                                                                    0.0s
+[0m[34m => [builder 3/5] COPY main.go .                                                                                                  0.0s
+[0m[34m => [builder 4/5] RUN go mod init app                                                                                             0.1s
+[0m => [builder 5/5] RUN go build -ldflags="-X main.version=1.0.0" -o app .                                                          0.3s
+[?25h[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Building 0.8s (8/10)                                                                                                docker:default
+[34m => [internal] load build definition from Dockerfile                                                                              0.0s
+[0m[34m => => transferring dockerfile: 451B                                                                                              0.0s
+[0m[34m => [internal] load metadata for docker.io/library/golang:1.21-alpine                                                             0.0s
+[0m[34m => [internal] load .dockerignore                                                                                                 0.0s
+[0m[34m => => transferring context: 2B                                                                                                   0.0s
+[0m[34m => [builder 1/5] FROM docker.io/library/golang:1.21-alpine                                                                       0.1s
+[0m[34m => [internal] load build context                                                                                                 0.1s
+[0m[34m => => transferring context: 356B                                                                                                 0.0s
+[0m[34m => [builder 2/5] WORKDIR /app                                                                                                    0.0s
+[0m[34m => [builder 3/5] COPY main.go .                                                                                                  0.0s
+[0m[34m => [builder 4/5] RUN go mod init app                                                                                             0.1s
+[0m => [builder 5/5] RUN go build -ldflags="-X main.version=1.0.0" -o app .                                                          0.5s
+[?25h[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Building 1.0s (8/10)                                                                                                docker:default
+[34m => [internal] load build definition from Dockerfile                                                                              0.0s
+[0m[34m => => transferring dockerfile: 451B                                                                                              0.0s
+[0m[34m => [internal] load metadata for docker.io/library/golang:1.21-alpine                                                             0.0s
+[0m[34m => [internal] load .dockerignore                                                                                                 0.0s
+[0m[34m => => transferring context: 2B                                                                                                   0.0s
+[0m[34m => [builder 1/5] FROM docker.io/library/golang:1.21-alpine                                                                       0.1s
+[0m[34m => [internal] load build context                                                                                                 0.1s
+[0m[34m => => transferring context: 356B                                                                                                 0.0s
+[0m[34m => [builder 2/5] WORKDIR /app                                                                                                    0.0s
+[0m[34m => [builder 3/5] COPY main.go .                                                                                                  0.0s
+[0m[34m => [builder 4/5] RUN go mod init app                                                                                             0.1s
+[0m => [builder 5/5] RUN go build -ldflags="-X main.version=1.0.0" -o app .                                                          0.6s
+[?25h[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Building 1.1s (8/10)                                                                                                docker:default
+[34m => [internal] load build definition from Dockerfile                                                                              0.0s
+[0m[34m => => transferring dockerfile: 451B                                                                                              0.0s
+[0m[34m => [internal] load metadata for docker.io/library/golang:1.21-alpine                                                             0.0s
+[0m[34m => [internal] load .dockerignore                                                                                                 0.0s
+[0m[34m => => transferring context: 2B                                                                                                   0.0s
+[0m[34m => [builder 1/5] FROM docker.io/library/golang:1.21-alpine                                                                       0.1s
+[0m[34m => [internal] load build context                                                                                                 0.1s
+[0m[34m => => transferring context: 356B                                                                                                 0.0s
+[0m[34m => [builder 2/5] WORKDIR /app                                                                                                    0.0s
+[0m[34m => [builder 3/5] COPY main.go .                                                                                                  0.0s
+[0m[34m => [builder 4/5] RUN go mod init app                                                                                             0.1s
+[0m => [builder 5/5] RUN go build -ldflags="-X main.version=1.0.0" -o app .                                                          0.8s
+[?25h[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Building 1.3s (8/10)                                                                                                docker:default
+[34m => [internal] load build definition from Dockerfile                                                                              0.0s
+[0m[34m => => transferring dockerfile: 451B                                                                                              0.0s
+[0m[34m => [internal] load metadata for docker.io/library/golang:1.21-alpine                                                             0.0s
+[0m[34m => [internal] load .dockerignore                                                                                                 0.0s
+[0m[34m => => transferring context: 2B                                                                                                   0.0s
+[0m[34m => [builder 1/5] FROM docker.io/library/golang:1.21-alpine                                                                       0.1s
+[0m[34m => [internal] load build context                                                                                                 0.1s
+[0m[34m => => transferring context: 356B                                                                                                 0.0s
+[0m[34m => [builder 2/5] WORKDIR /app                                                                                                    0.0s
+[0m[34m => [builder 3/5] COPY main.go .                                                                                                  0.0s
+[0m[34m => [builder 4/5] RUN go mod init app                                                                                             0.1s
+[0m => [builder 5/5] RUN go build -ldflags="-X main.version=1.0.0" -o app .                                                          0.9s
+[?25h[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Building 1.4s (8/10)                                                                                                docker:default
+[34m => [internal] load build definition from Dockerfile                                                                              0.0s
+[0m[34m => => transferring dockerfile: 451B                                                                                              0.0s
+[0m[34m => [internal] load metadata for docker.io/library/golang:1.21-alpine                                                             0.0s
+[0m[34m => [internal] load .dockerignore                                                                                                 0.0s
+[0m[34m => => transferring context: 2B                                                                                                   0.0s
+[0m[34m => [builder 1/5] FROM docker.io/library/golang:1.21-alpine                                                                       0.1s
+[0m[34m => [internal] load build context                                                                                                 0.1s
+[0m[34m => => transferring context: 356B                                                                                                 0.0s
+[0m[34m => [builder 2/5] WORKDIR /app                                                                                                    0.0s
+[0m[34m => [builder 3/5] COPY main.go .                                                                                                  0.0s
+[0m[34m => [builder 4/5] RUN go mod init app                                                                                             0.1s
+[0m => [builder 5/5] RUN go build -ldflags="-X main.version=1.0.0" -o app .                                                          1.1s
+[?25h[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Building 1.6s (8/10)                                                                                                docker:default
+[34m => [internal] load build definition from Dockerfile                                                                              0.0s
+[0m[34m => => transferring dockerfile: 451B                                                                                              0.0s
+[0m[34m => [internal] load metadata for docker.io/library/golang:1.21-alpine                                                             0.0s
+[0m[34m => [internal] load .dockerignore                                                                                                 0.0s
+[0m[34m => => transferring context: 2B                                                                                                   0.0s
+[0m[34m => [builder 1/5] FROM docker.io/library/golang:1.21-alpine                                                                       0.1s
+[0m[34m => [internal] load build context                                                                                                 0.1s
+[0m[34m => => transferring context: 356B                                                                                                 0.0s
+[0m[34m => [builder 2/5] WORKDIR /app                                                                                                    0.0s
+[0m[34m => [builder 3/5] COPY main.go .                                                                                                  0.0s
+[0m[34m => [builder 4/5] RUN go mod init app                                                                                             0.1s
+[0m => [builder 5/5] RUN go build -ldflags="-X main.version=1.0.0" -o app .                                                          1.2s
+[?25h[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Building 1.7s (8/10)                                                                                                docker:default
+[34m => [internal] load build definition from Dockerfile                                                                              0.0s
+[0m[34m => => transferring dockerfile: 451B                                                                                              0.0s
+[0m[34m => [internal] load metadata for docker.io/library/golang:1.21-alpine                                                             0.0s
+[0m[34m => [internal] load .dockerignore                                                                                                 0.0s
+[0m[34m => => transferring context: 2B                                                                                                   0.0s
+[0m[34m => [builder 1/5] FROM docker.io/library/golang:1.21-alpine                                                                       0.1s
+[0m[34m => [internal] load build context                                                                                                 0.1s
+[0m[34m => => transferring context: 356B                                                                                                 0.0s
+[0m[34m => [builder 2/5] WORKDIR /app                                                                                                    0.0s
+[0m[34m => [builder 3/5] COPY main.go .                                                                                                  0.0s
+[0m[34m => [builder 4/5] RUN go mod init app                                                                                             0.1s
+[0m => [builder 5/5] RUN go build -ldflags="-X main.version=1.0.0" -o app .                                                          1.4s
+[?25h[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Building 1.9s (8/10)                                                                                                docker:default
+[34m => [internal] load build definition from Dockerfile                                                                              0.0s
+[0m[34m => => transferring dockerfile: 451B                                                                                              0.0s
+[0m[34m => [internal] load metadata for docker.io/library/golang:1.21-alpine                                                             0.0s
+[0m[34m => [internal] load .dockerignore                                                                                                 0.0s
+[0m[34m => => transferring context: 2B                                                                                                   0.0s
+[0m[34m => [builder 1/5] FROM docker.io/library/golang:1.21-alpine                                                                       0.1s
+[0m[34m => [internal] load build context                                                                                                 0.1s
+[0m[34m => => transferring context: 356B                                                                                                 0.0s
+[0m[34m => [builder 2/5] WORKDIR /app                                                                                                    0.0s
+[0m[34m => [builder 3/5] COPY main.go .                                                                                                  0.0s
+[0m[34m => [builder 4/5] RUN go mod init app                                                                                             0.1s
+[0m => [builder 5/5] RUN go build -ldflags="-X main.version=1.0.0" -o app .                                                          1.5s
+[?25h[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Building 2.0s (8/10)                                                                                                docker:default
+[34m => [internal] load build definition from Dockerfile                                                                              0.0s
+[0m[34m => => transferring dockerfile: 451B                                                                                              0.0s
+[0m[34m => [internal] load metadata for docker.io/library/golang:1.21-alpine                                                             0.0s
+[0m[34m => [internal] load .dockerignore                                                                                                 0.0s
+[0m[34m => => transferring context: 2B                                                                                                   0.0s
+[0m[34m => [builder 1/5] FROM docker.io/library/golang:1.21-alpine                                                                       0.1s
+[0m[34m => [internal] load build context                                                                                                 0.1s
+[0m[34m => => transferring context: 356B                                                                                                 0.0s
+[0m[34m => [builder 2/5] WORKDIR /app                                                                                                    0.0s
+[0m[34m => [builder 3/5] COPY main.go .                                                                                                  0.0s
+[0m[34m => [builder 4/5] RUN go mod init app                                                                                             0.1s
+[0m => [builder 5/5] RUN go build -ldflags="-X main.version=1.0.0" -o app .                                                          1.7s
+[?25h[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Building 2.2s (8/10)                                                                                                docker:default
+[34m => [internal] load build definition from Dockerfile                                                                              0.0s
+[0m[34m => => transferring dockerfile: 451B                                                                                              0.0s
+[0m[34m => [internal] load metadata for docker.io/library/golang:1.21-alpine                                                             0.0s
+[0m[34m => [internal] load .dockerignore                                                                                                 0.0s
+[0m[34m => => transferring context: 2B                                                                                                   0.0s
+[0m[34m => [builder 1/5] FROM docker.io/library/golang:1.21-alpine                                                                       0.1s
+[0m[34m => [internal] load build context                                                                                                 0.1s
+[0m[34m => => transferring context: 356B                                                                                                 0.0s
+[0m[34m => [builder 2/5] WORKDIR /app                                                                                                    0.0s
+[0m[34m => [builder 3/5] COPY main.go .                                                                                                  0.0s
+[0m[34m => [builder 4/5] RUN go mod init app                                                                                             0.1s
+[0m => [builder 5/5] RUN go build -ldflags="-X main.version=1.0.0" -o app .                                                          1.8s
+[?25h[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Building 2.3s (8/10)                                                                                                docker:default
+[34m => [internal] load build definition from Dockerfile                                                                              0.0s
+[0m[34m => => transferring dockerfile: 451B                                                                                              0.0s
+[0m[34m => [internal] load metadata for docker.io/library/golang:1.21-alpine                                                             0.0s
+[0m[34m => [internal] load .dockerignore                                                                                                 0.0s
+[0m[34m => => transferring context: 2B                                                                                                   0.0s
+[0m[34m => [builder 1/5] FROM docker.io/library/golang:1.21-alpine                                                                       0.1s
+[0m[34m => [internal] load build context                                                                                                 0.1s
+[0m[34m => => transferring context: 356B                                                                                                 0.0s
+[0m[34m => [builder 2/5] WORKDIR /app                                                                                                    0.0s
+[0m[34m => [builder 3/5] COPY main.go .                                                                                                  0.0s
+[0m[34m => [builder 4/5] RUN go mod init app                                                                                             0.1s
+[0m => [builder 5/5] RUN go build -ldflags="-X main.version=1.0.0" -o app .                                                          2.0s
+[?25h[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Building 2.5s (8/10)                                                                                                docker:default
+[34m => [internal] load build definition from Dockerfile                                                                              0.0s
+[0m[34m => => transferring dockerfile: 451B                                                                                              0.0s
+[0m[34m => [internal] load metadata for docker.io/library/golang:1.21-alpine                                                             0.0s
+[0m[34m => [internal] load .dockerignore                                                                                                 0.0s
+[0m[34m => => transferring context: 2B                                                                                                   0.0s
+[0m[34m => [builder 1/5] FROM docker.io/library/golang:1.21-alpine                                                                       0.1s
+[0m[34m => [internal] load build context                                                                                                 0.1s
+[0m[34m => => transferring context: 356B                                                                                                 0.0s
+[0m[34m => [builder 2/5] WORKDIR /app                                                                                                    0.0s
+[0m[34m => [builder 3/5] COPY main.go .                                                                                                  0.0s
+[0m[34m => [builder 4/5] RUN go mod init app                                                                                             0.1s
+[0m => [builder 5/5] RUN go build -ldflags="-X main.version=1.0.0" -o app .                                                          2.1s
+[?25h[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Building 2.6s (8/10)                                                                                                docker:default
+[34m => [internal] load build definition from Dockerfile                                                                              0.0s
+[0m[34m => => transferring dockerfile: 451B                                                                                              0.0s
+[0m[34m => [internal] load metadata for docker.io/library/golang:1.21-alpine                                                             0.0s
+[0m[34m => [internal] load .dockerignore                                                                                                 0.0s
+[0m[34m => => transferring context: 2B                                                                                                   0.0s
+[0m[34m => [builder 1/5] FROM docker.io/library/golang:1.21-alpine                                                                       0.1s
+[0m[34m => [internal] load build context                                                                                                 0.1s
+[0m[34m => => transferring context: 356B                                                                                                 0.0s
+[0m[34m => [builder 2/5] WORKDIR /app                                                                                                    0.0s
+[0m[34m => [builder 3/5] COPY main.go .                                                                                                  0.0s
+[0m[34m => [builder 4/5] RUN go mod init app                                                                                             0.1s
+[0m => [builder 5/5] RUN go build -ldflags="-X main.version=1.0.0" -o app .                                                          2.3s
+[?25h[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Building 2.8s (8/10)                                                                                                docker:default
+[34m => [internal] load build definition from Dockerfile                                                                              0.0s
+[0m[34m => => transferring dockerfile: 451B                                                                                              0.0s
+[0m[34m => [internal] load metadata for docker.io/library/golang:1.21-alpine                                                             0.0s
+[0m[34m => [internal] load .dockerignore                                                                                                 0.0s
+[0m[34m => => transferring context: 2B                                                                                                   0.0s
+[0m[34m => [builder 1/5] FROM docker.io/library/golang:1.21-alpine                                                                       0.1s
+[0m[34m => [internal] load build context                                                                                                 0.1s
+[0m[34m => => transferring context: 356B                                                                                                 0.0s
+[0m[34m => [builder 2/5] WORKDIR /app                                                                                                    0.0s
+[0m[34m => [builder 3/5] COPY main.go .                                                                                                  0.0s
+[0m[34m => [builder 4/5] RUN go mod init app                                                                                             0.1s
+[0m => [builder 5/5] RUN go build -ldflags="-X main.version=1.0.0" -o app .                                                          2.4s
+[?25h[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Building 2.9s (8/10)                                                                                                docker:default
+[34m => [internal] load build definition from Dockerfile                                                                              0.0s
+[0m[34m => => transferring dockerfile: 451B                                                                                              0.0s
+[0m[34m => [internal] load metadata for docker.io/library/golang:1.21-alpine                                                             0.0s
+[0m[34m => [internal] load .dockerignore                                                                                                 0.0s
+[0m[34m => => transferring context: 2B                                                                                                   0.0s
+[0m[34m => [builder 1/5] FROM docker.io/library/golang:1.21-alpine                                                                       0.1s
+[0m[34m => [internal] load build context                                                                                                 0.1s
+[0m[34m => => transferring context: 356B                                                                                                 0.0s
+[0m[34m => [builder 2/5] WORKDIR /app                                                                                                    0.0s
+[0m[34m => [builder 3/5] COPY main.go .                                                                                                  0.0s
+[0m[34m => [builder 4/5] RUN go mod init app                                                                                             0.1s
+[0m => [builder 5/5] RUN go build -ldflags="-X main.version=1.0.0" -o app .                                                          2.6s
+[?25h[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Building 3.1s (8/10)                                                                                                docker:default
+[34m => [internal] load build definition from Dockerfile                                                                              0.0s
+[0m[34m => => transferring dockerfile: 451B                                                                                              0.0s
+[0m[34m => [internal] load metadata for docker.io/library/golang:1.21-alpine                                                             0.0s
+[0m[34m => [internal] load .dockerignore                                                                                                 0.0s
+[0m[34m => => transferring context: 2B                                                                                                   0.0s
+[0m[34m => [builder 1/5] FROM docker.io/library/golang:1.21-alpine                                                                       0.1s
+[0m[34m => [internal] load build context                                                                                                 0.1s
+[0m[34m => => transferring context: 356B                                                                                                 0.0s
+[0m[34m => [builder 2/5] WORKDIR /app                                                                                                    0.0s
+[0m[34m => [builder 3/5] COPY main.go .                                                                                                  0.0s
+[0m[34m => [builder 4/5] RUN go mod init app                                                                                             0.1s
+[0m => [builder 5/5] RUN go build -ldflags="-X main.version=1.0.0" -o app .                                                          2.7s
+[?25h[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Building 3.2s (8/10)                                                                                                docker:default
+[34m => [internal] load build definition from Dockerfile                                                                              0.0s
+[0m[34m => => transferring dockerfile: 451B                                                                                              0.0s
+[0m[34m => [internal] load metadata for docker.io/library/golang:1.21-alpine                                                             0.0s
+[0m[34m => [internal] load .dockerignore                                                                                                 0.0s
+[0m[34m => => transferring context: 2B                                                                                                   0.0s
+[0m[34m => [builder 1/5] FROM docker.io/library/golang:1.21-alpine                                                                       0.1s
+[0m[34m => [internal] load build context                                                                                                 0.1s
+[0m[34m => => transferring context: 356B                                                                                                 0.0s
+[0m[34m => [builder 2/5] WORKDIR /app                                                                                                    0.0s
+[0m[34m => [builder 3/5] COPY main.go .                                                                                                  0.0s
+[0m[34m => [builder 4/5] RUN go mod init app                                                                                             0.1s
+[0m => [builder 5/5] RUN go build -ldflags="-X main.version=1.0.0" -o app .                                                          2.9s
+[?25h[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Building 3.4s (8/10)                                                                                                docker:default
+[34m => [internal] load build definition from Dockerfile                                                                              0.0s
+[0m[34m => => transferring dockerfile: 451B                                                                                              0.0s
+[0m[34m => [internal] load metadata for docker.io/library/golang:1.21-alpine                                                             0.0s
+[0m[34m => [internal] load .dockerignore                                                                                                 0.0s
+[0m[34m => => transferring context: 2B                                                                                                   0.0s
+[0m[34m => [builder 1/5] FROM docker.io/library/golang:1.21-alpine                                                                       0.1s
+[0m[34m => [internal] load build context                                                                                                 0.1s
+[0m[34m => => transferring context: 356B                                                                                                 0.0s
+[0m[34m => [builder 2/5] WORKDIR /app                                                                                                    0.0s
+[0m[34m => [builder 3/5] COPY main.go .                                                                                                  0.0s
+[0m[34m => [builder 4/5] RUN go mod init app                                                                                             0.1s
+[0m => [builder 5/5] RUN go build -ldflags="-X main.version=1.0.0" -o app .                                                          3.0s
+[?25h[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Building 3.5s (8/10)                                                                                                docker:default
+[34m => [internal] load build definition from Dockerfile                                                                              0.0s
+[0m[34m => => transferring dockerfile: 451B                                                                                              0.0s
+[0m[34m => [internal] load metadata for docker.io/library/golang:1.21-alpine                                                             0.0s
+[0m[34m => [internal] load .dockerignore                                                                                                 0.0s
+[0m[34m => => transferring context: 2B                                                                                                   0.0s
+[0m[34m => [builder 1/5] FROM docker.io/library/golang:1.21-alpine                                                                       0.1s
+[0m[34m => [internal] load build context                                                                                                 0.1s
+[0m[34m => => transferring context: 356B                                                                                                 0.0s
+[0m[34m => [builder 2/5] WORKDIR /app                                                                                                    0.0s
+[0m[34m => [builder 3/5] COPY main.go .                                                                                                  0.0s
+[0m[34m => [builder 4/5] RUN go mod init app                                                                                             0.1s
+[0m => [builder 5/5] RUN go build -ldflags="-X main.version=1.0.0" -o app .                                                          3.2s
+[?25h[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Building 3.7s (8/10)                                                                                                docker:default
+[34m => [internal] load build definition from Dockerfile                                                                              0.0s
+[0m[34m => => transferring dockerfile: 451B                                                                                              0.0s
+[0m[34m => [internal] load metadata for docker.io/library/golang:1.21-alpine                                                             0.0s
+[0m[34m => [internal] load .dockerignore                                                                                                 0.0s
+[0m[34m => => transferring context: 2B                                                                                                   0.0s
+[0m[34m => [builder 1/5] FROM docker.io/library/golang:1.21-alpine                                                                       0.1s
+[0m[34m => [internal] load build context                                                                                                 0.1s
+[0m[34m => => transferring context: 356B                                                                                                 0.0s
+[0m[34m => [builder 2/5] WORKDIR /app                                                                                                    0.0s
+[0m[34m => [builder 3/5] COPY main.go .                                                                                                  0.0s
+[0m[34m => [builder 4/5] RUN go mod init app                                                                                             0.1s
+[0m => [builder 5/5] RUN go build -ldflags="-X main.version=1.0.0" -o app .                                                          3.3s
+[?25h[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Building 3.8s (8/10)                                                                                                docker:default
+[34m => [internal] load build definition from Dockerfile                                                                              0.0s
+[0m[34m => => transferring dockerfile: 451B                                                                                              0.0s
+[0m[34m => [internal] load metadata for docker.io/library/golang:1.21-alpine                                                             0.0s
+[0m[34m => [internal] load .dockerignore                                                                                                 0.0s
+[0m[34m => => transferring context: 2B                                                                                                   0.0s
+[0m[34m => [builder 1/5] FROM docker.io/library/golang:1.21-alpine                                                                       0.1s
+[0m[34m => [internal] load build context                                                                                                 0.1s
+[0m[34m => => transferring context: 356B                                                                                                 0.0s
+[0m[34m => [builder 2/5] WORKDIR /app                                                                                                    0.0s
+[0m[34m => [builder 3/5] COPY main.go .                                                                                                  0.0s
+[0m[34m => [builder 4/5] RUN go mod init app                                                                                             0.1s
+[0m => [builder 5/5] RUN go build -ldflags="-X main.version=1.0.0" -o app .                                                          3.5s
+[?25h[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Building 4.0s (8/10)                                                                                                docker:default
+[34m => [internal] load build definition from Dockerfile                                                                              0.0s
+[0m[34m => => transferring dockerfile: 451B                                                                                              0.0s
+[0m[34m => [internal] load metadata for docker.io/library/golang:1.21-alpine                                                             0.0s
+[0m[34m => [internal] load .dockerignore                                                                                                 0.0s
+[0m[34m => => transferring context: 2B                                                                                                   0.0s
+[0m[34m => [builder 1/5] FROM docker.io/library/golang:1.21-alpine                                                                       0.1s
+[0m[34m => [internal] load build context                                                                                                 0.1s
+[0m[34m => => transferring context: 356B                                                                                                 0.0s
+[0m[34m => [builder 2/5] WORKDIR /app                                                                                                    0.0s
+[0m[34m => [builder 3/5] COPY main.go .                                                                                                  0.0s
+[0m[34m => [builder 4/5] RUN go mod init app                                                                                             0.1s
+[0m => [builder 5/5] RUN go build -ldflags="-X main.version=1.0.0" -o app .                                                          3.6s
+[?25h[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Building 4.1s (8/10)                                                                                                docker:default
+[34m => [internal] load build definition from Dockerfile                                                                              0.0s
+[0m[34m => => transferring dockerfile: 451B                                                                                              0.0s
+[0m[34m => [internal] load metadata for docker.io/library/golang:1.21-alpine                                                             0.0s
+[0m[34m => [internal] load .dockerignore                                                                                                 0.0s
+[0m[34m => => transferring context: 2B                                                                                                   0.0s
+[0m[34m => [builder 1/5] FROM docker.io/library/golang:1.21-alpine                                                                       0.1s
+[0m[34m => [internal] load build context                                                                                                 0.1s
+[0m[34m => => transferring context: 356B                                                                                                 0.0s
+[0m[34m => [builder 2/5] WORKDIR /app                                                                                                    0.0s
+[0m[34m => [builder 3/5] COPY main.go .                                                                                                  0.0s
+[0m[34m => [builder 4/5] RUN go mod init app                                                                                             0.1s
+[0m => [builder 5/5] RUN go build -ldflags="-X main.version=1.0.0" -o app .                                                          3.8s
+[?25h[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Building 4.3s (8/10)                                                                                                docker:default
+[34m => [internal] load build definition from Dockerfile                                                                              0.0s
+[0m[34m => => transferring dockerfile: 451B                                                                                              0.0s
+[0m[34m => [internal] load metadata for docker.io/library/golang:1.21-alpine                                                             0.0s
+[0m[34m => [internal] load .dockerignore                                                                                                 0.0s
+[0m[34m => => transferring context: 2B                                                                                                   0.0s
+[0m[34m => [builder 1/5] FROM docker.io/library/golang:1.21-alpine                                                                       0.1s
+[0m[34m => [internal] load build context                                                                                                 0.1s
+[0m[34m => => transferring context: 356B                                                                                                 0.0s
+[0m[34m => [builder 2/5] WORKDIR /app                                                                                                    0.0s
+[0m[34m => [builder 3/5] COPY main.go .                                                                                                  0.0s
+[0m[34m => [builder 4/5] RUN go mod init app                                                                                             0.1s
+[0m => [builder 5/5] RUN go build -ldflags="-X main.version=1.0.0" -o app .                                                          3.9s
+[?25h[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Building 4.4s (8/10)                                                                                                docker:default
+[34m => [internal] load build definition from Dockerfile                                                                              0.0s
+[0m[34m => => transferring dockerfile: 451B                                                                                              0.0s
+[0m[34m => [internal] load metadata for docker.io/library/golang:1.21-alpine                                                             0.0s
+[0m[34m => [internal] load .dockerignore                                                                                                 0.0s
+[0m[34m => => transferring context: 2B                                                                                                   0.0s
+[0m[34m => [builder 1/5] FROM docker.io/library/golang:1.21-alpine                                                                       0.1s
+[0m[34m => [internal] load build context                                                                                                 0.1s
+[0m[34m => => transferring context: 356B                                                                                                 0.0s
+[0m[34m => [builder 2/5] WORKDIR /app                                                                                                    0.0s
+[0m[34m => [builder 3/5] COPY main.go .                                                                                                  0.0s
+[0m[34m => [builder 4/5] RUN go mod init app                                                                                             0.1s
+[0m => [builder 5/5] RUN go build -ldflags="-X main.version=1.0.0" -o app .                                                          4.1s
+[?25h[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Building 4.6s (9/10)                                                                                                docker:default
+[34m => [internal] load build definition from Dockerfile                                                                              0.0s
+[0m[34m => => transferring dockerfile: 451B                                                                                              0.0s
+[0m[34m => [internal] load metadata for docker.io/library/golang:1.21-alpine                                                             0.0s
+[0m[34m => [internal] load .dockerignore                                                                                                 0.0s
+[0m[34m => => transferring context: 2B                                                                                                   0.0s
+[0m[34m => [builder 1/5] FROM docker.io/library/golang:1.21-alpine                                                                       0.1s
+[0m[34m => [internal] load build context                                                                                                 0.1s
+[0m[34m => => transferring context: 356B                                                                                                 0.0s
+[0m[34m => [builder 2/5] WORKDIR /app                                                                                                    0.0s
+[0m[34m => [builder 3/5] COPY main.go .                                                                                                  0.0s
+[0m[34m => [builder 4/5] RUN go mod init app                                                                                             0.1s
+[0m[34m => [builder 5/5] RUN go build -ldflags="-X main.version=1.0.0" -o app .                                                          4.2s
+[0m[?25h[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Building 4.7s (11/11)                                                                                               docker:default
+[34m => [internal] load build definition from Dockerfile                                                                              0.0s
+[0m[34m => => transferring dockerfile: 451B                                                                                              0.0s
+[0m[34m => [internal] load metadata for docker.io/library/golang:1.21-alpine                                                             0.0s
+[0m[34m => [internal] load .dockerignore                                                                                                 0.0s
+[0m[34m => => transferring context: 2B                                                                                                   0.0s
+[0m[34m => [builder 1/5] FROM docker.io/library/golang:1.21-alpine                                                                       0.1s
+[0m[34m => [internal] load build context                                                                                                 0.1s
+[0m[34m => => transferring context: 356B                                                                                                 0.0s
+[0m[34m => [builder 2/5] WORKDIR /app                                                                                                    0.0s
+[0m[34m => [builder 3/5] COPY main.go .                                                                                                  0.0s
+[0m[34m => [builder 4/5] RUN go mod init app                                                                                             0.1s
+[0m[34m => [builder 5/5] RUN go build -ldflags="-X main.version=1.0.0" -o app .                                                          4.2s
+[0m[34m => [stage-1 1/1] COPY --from=builder /app/app /app                                                                               0.0s
+[0m[34m => exporting to image                                                                                                            0.1s
+[0m[34m => => exporting layers                                                                                                           0.0s
+[0m[34m => => writing image sha256:a1127728e366e99cc8e5f29d70ccf0a859938440bb4d2dda9da273512493bc16                                      0.0s
+[0m[34m => => naming to docker.io/library/myapp:1.0.0                                                                                    0.0s
+[0m[?25h[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Building 4.8s (11/11) FINISHED                                                                                      docker:default
+[34m => [internal] load build definition from Dockerfile                                                                              0.0s
+[0m[34m => => transferring dockerfile: 451B                                                                                              0.0s
+[0m[34m => [internal] load metadata for docker.io/library/golang:1.21-alpine                                                             0.0s
+[0m[34m => [internal] load .dockerignore                                                                                                 0.0s
+[0m[34m => => transferring context: 2B                                                                                                   0.0s
+[0m[34m => [builder 1/5] FROM docker.io/library/golang:1.21-alpine                                                                       0.1s
+[0m[34m => [internal] load build context                                                                                                 0.1s
+[0m[34m => => transferring context: 356B                                                                                                 0.0s
+[0m[34m => [builder 2/5] WORKDIR /app                                                                                                    0.0s
+[0m[34m => [builder 3/5] COPY main.go .                                                                                                  0.0s
+[0m[34m => [builder 4/5] RUN go mod init app                                                                                             0.1s
+[0m[34m => [builder 5/5] RUN go build -ldflags="-X main.version=1.0.0" -o app .                                                          4.2s
+[0m[34m => [stage-1 1/1] COPY --from=builder /app/app /app                                                                               0.0s
+[0m[34m => exporting to image                                                                                                            0.1s
+[0m[34m => => exporting layers                                                                                                           0.0s
+[0m[34m => => writing image sha256:a1127728e366e99cc8e5f29d70ccf0a859938440bb4d2dda9da273512493bc16                                      0.0s
+[0m[34m => => naming to docker.io/library/myapp:1.0.0                                                                                    0.0s
+[0m[?25h]0;rayhan354@archlinux-rayhan354:/mnt/sdd1/Tes PT Simple Journey Indonesia/shift-test[?2004h[rayhan354@archlinux-rayhan354 shift-test]$ [7mdocker images myapp[27mdocker images myapp
+[?2004l                                                                                                                   [1m[106m[30mi[0m[0m [96mInfo → [0m[0m [38;5;0m[48;5;14m U [0m In Use
+[39m[1mIMAGE[0m         [39m[1mID[0m             [39m[1mDISK USAGE[0m   [39m[1mCONTENT SIZE[0m   [39m[1mEXTRA[0m
+[34m[1mmyapp:1.0.0[0m   [39ma1127728e366[0m       [39m6.72MB[0m             [39m0B[0m        
+]0;rayhan354@archlinux-rayhan354:/mnt/sdd1/Tes PT Simple Journey Indonesia/shift-test[?2004h[rayhan354@archlinux-rayhan354 shift-test]$ [7mdocker run -d --restart=unless-stopped -p 8080:8080 --name myapp myapp:1.0.0[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cdocker run -d --restart=unless-stopped -p 8080:8080 --name myapp myapp:1.0.0
+[?2004l402494ea8199fe85ad4610ebf909de34a6bbe9bb53ddb6e6451b8d858eee073a
+]0;rayhan354@archlinux-rayhan354:/mnt/sdd1/Tes PT Simple Journey Indonesia/shift-test[?2004h[rayhan354@archlinux-rayhan354 shift-test]$ [7mcurl http://localhost:8080[27mcurl http://localhost:8080
+[?2004lcurl: (56) Recv failure: Connection reset by peer
+]0;rayhan354@archlinux-rayhan354:/mnt/sdd1/Tes PT Simple Journey Indonesia/shift-test[?2004h[rayhan354@archlinux-rayhan354 shift-test]$ [7mdocker ps -a | grep myapp-container[27mdocker ps -a | grep myapp-container
+[?2004l]0;rayhan354@archlinux-rayhan354:/mnt/sdd1/Tes PT Simple Journey Indonesia/shift-test[?2004h[rayhan354@archlinux-rayhan354 shift-test]$ [7mdocker logs myapp-container[27mdocker logs myapp-container
+[?2004lError response from daemon: No such container: myapp-container
+]0;rayhan354@archlinux-rayhan354:/mnt/sdd1/Tes PT Simple Journey Indonesia/shift-test[?2004h[rayhan354@archlinux-rayhan354 shift-test]$ [7mdocker stop myapp-container[27m
+[7mdocker rm myapp-container[27m
+[7mdocker run --rm -p 8080:8080 --name myapp-container myapp:1.0.0[27m[A[Adocker stop myapp-container
+docker rm myapp-container
+docker run --rm -p 8080:8080 --name myapp-container myapp:1.0.0
+[?2004lError response from daemon: No such container: myapp-container
+Error response from daemon: No such container: myapp-container
+docker: Error response from daemon: failed to set up container networking: driver failed programming external connectivity on endpoint myapp-container (a5c84b28f665d4755442fc473cc6fc2c54ee6733e61be51db13c80616409e208): Bind for 0.0.0.0:8080 failed: port is already allocated
+
+Run 'docker run --help' for more information
+]0;rayhan354@archlinux-rayhan354:/mnt/sdd1/Tes PT Simple Journey Indonesia/shift-test[?2004h[rayhan354@archlinux-rayhan354 shift-test]$ [7mdocker logs myapp[27mdocker logs myapp
+[?2004lServer is running on port 8080...
+]0;rayhan354@archlinux-rayhan354:/mnt/sdd1/Tes PT Simple Journey Indonesia/shift-test[?2004h[rayhan354@archlinux-rayhan354 shift-test]$ [7mdocker run --rm -p 8080:8080 --name myapp myapp:1.0.0[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cdocker run --rm -p 8080:8080 --name myapp myapp:1.0.0
+[?2004ldocker: Error response from daemon: Conflict. The container name "/myapp" is already in use by container "402494ea8199fe85ad4610ebf909de34a6bbe9bb53ddb6e6451b8d858eee073a". You have to remove (or rename) that container to be able to reuse that name.
+
+Run 'docker run --help' for more information
+]0;rayhan354@archlinux-rayhan354:/mnt/sdd1/Tes PT Simple Journey Indonesia/shift-test[?2004h[rayhan354@archlinux-rayhan354 shift-test]$ [7mdocker stop myapp[27mdocker stop myapp
+[?2004lmyapp
+]0;rayhan354@archlinux-rayhan354:/mnt/sdd1/Tes PT Simple Journey Indonesia/shift-test[?2004h[rayhan354@archlinux-rayhan354 shift-test]$ [7mdocker rm myapp[27m
+[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cdocker rm myapp
+[A
+[?2004lmyapp
+]0;rayhan354@archlinux-rayhan354:/mnt/sdd1/Tes PT Simple Journey Indonesia/shift-test[?2004h[rayhan354@archlinux-rayhan354 shift-test]$ [7mdocker run --rm -p 8080:8080 --name myapp myapp:1.0.0[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cdocker run --rm -p 8080:8080 --name myapp myapp:1.0.0
+[?2004lServer is running on port 8080...
+^C]0;rayhan354@archlinux-rayhan354:/mnt/sdd1/Tes PT Simple Journey Indonesia/shift-test[?2004h[rayhan354@archlinux-rayhan354 shift-test]$ [7mdocker run --rm -p 8080:8080 -v $(pwd):/app -w /app golang:1.21-alpine goScript started on 2026-09-02 18:07:57+07:00 [TERM="xterm-256color" COLUMNS="135" LINES="30"]
+]0;rayhan354@archlinux-rayhan354:/mnt/sdd1/Tes PT Simple Journey Indonesia/shift-test[?2004h[rayhan354@archlinux-rayhan354 shift-test]$ [7mdocker run --rm -p 8080:8080 -v "$(pwd)":/app -w /app golang:1.21-alpine go run test.go[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cdocker run --rm -p 8080:8080 -v "$(pwd)":/app -w /app golang:1.21-alpine go run test.go
+[?2004llistening on :8080
+^C^C^C
+got 3 SIGTERM/SIGINTs, forcefully exiting
+]0;rayhan354@archlinux-rayhan354:/mnt/sdd1/Tes PT Simple Journey Indonesia/shift-test[?2004h[rayhan354@archlinux-rayhan354 shift-test]$ ^C[?2004l[?2004h[?2004l
+]0;rayhan354@archlinux-rayhan354:/mnt/sdd1/Tes PT Simple Journey Indonesia/shift-test[?2004h[rayhan354@archlinux-rayhan354 shift-test]$ [7mdocker run -d --rm --name myapp myapp:1.0.0[27m
+[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cdocker run -d --rm --name myapp myapp:1.0.0
+[A
+[?2004l8945f2f4a34e77dc8a4c0f7227d82d2fa8d0486a4d0df08e2aa35aacd4075013
+]0;rayhan354@archlinux-rayhan354:/mnt/sdd1/Tes PT Simple Journey Indonesia/shift-test[?2004h[rayhan354@archlinux-rayhan354 shift-test]$ [7mdocker exec -it myapp sh -c "apk add curl && curl http://localhost:8080"[27m
+[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cdocker exec -it myapp sh -c "apk add curl && curl http://localhost:8080"
+[A
+[?2004lOCI runtime exec failed: exec failed: unable to start container process: exec: "sh": executable file not found in $PATH
+]0;rayhan354@archlinux-rayhan354:/mnt/sdd1/Tes PT Simple Journey Indonesia/shift-test[?2004h[rayhan354@archlinux-rayhan354 shift-test]$ docker exec -it myapp sh -c "apk add curl && curl http://localhost:8080"
+[?2004lOCI runtime exec failed: exec failed: unable to start container process: exec: "sh": executable file not found in $PATH
+]0;rayhan354@archlinux-rayhan354:/mnt/sdd1/Tes PT Simple Journey Indonesia/shift-test[?2004h[rayhan354@archlinux-rayhan354 shift-test]$ [7mdocker run --rm --net=host -v "$(pwd)":/app -w /app golang:1.21-alpine go run test.go[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cdocker run --rm --net=host -v "$(pwd)":/app -w /app golang:1.21-alpine go run test.go
+[?2004llistening on :8080
+]0;rayhan354@archlinux-rayhan354:/mnt/sdd1/Tes PT Simple Journey Indonesia/shift-test[?2004h[rayhan354@archlinux-rayhan354 shift-test]$ docker run --rm --net=host -v "$(pwd)":/app -w /app golang:1.21-alpine go run test.go
+[?2004llistening on :8080
+]0;rayhan354@archlinux-rayhan354:/mnt/sdd1/Tes PT Simple Journey Indonesia/shift-test[?2004h[rayhan354@archlinux-rayhan354 shift-test]$ [7mmullvad lan set allow[27mmullvad lan set allow
+[?2004lChanged local network sharing setting
+]0;rayhan354@archlinux-rayhan354:/mnt/sdd1/Tes PT Simple Journey Indonesia/shift-test[?2004h[rayhan354@archlinux-rayhan354 shift-test]$ [7mdocker run --rm -p 8080:8080 -v "$(pwd)":/app -w /app golang:1.21-alpine go run test.go[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cdocker run --rm -p 8080:8080 -v "$(pwd)":/app -w /app golang:1.21-alpine go run test.go
+[?2004ldocker: Error response from daemon: failed to set up container networking: driver failed programming external connectivity on endpoint condescending_swanson (5fc1981be5d06dc30c630fa0fde8fcd5c0727367bd2bbf15522961d33914abc4): Bind for 0.0.0.0:8080 failed: port is already allocated
+
+Run 'docker run --help' for more information
+]0;rayhan354@archlinux-rayhan354:/mnt/sdd1/Tes PT Simple Journey Indonesia/shift-test[?2004h[rayhan354@archlinux-rayhan354 shift-test]$ [7mdocker run --rm --network host -v "$(pwd)":/app -w /app golang:1.21-alpine go run test.go[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cdocker run --rm --network host -v "$(pwd)":/app -w /app golang:1.21-alpine go run test.go
+[?2004llistening on :8080
+]0;rayhan354@archlinux-rayhan354:/mnt/sdd1/Tes PT Simple Journey Indonesia/shift-test[?2004h[rayhan354@archlinux-rayhan354 shift-test]$ [7mip addr show docker0[27mip addr show docker0
+[?2004l4: [1;36mdocker0: [0m<BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state [1;32mUP [0mgroup default qlen 0
+    link/ether [1;33mf6:b1:cc:af:f6:d8[0m brd [1;33mff:ff:ff:ff:ff:ff[0m
+    inet [1;35m172.17.0.1[0m/16 brd [1;35m172.17.255.255 [0mscope global docker0
+       valid_lft forever preferred_lft forever
+]0;rayhan354@archlinux-rayhan354:/mnt/sdd1/Tes PT Simple Journey Indonesia/shift-test[?2004h[rayhan354@archlinux-rayhan354 shift-test]$ [7msudo nft add table inet excludeTraffic[27msudo nft add table inet excludeTraffic
+[?2004l[sudo] password for rayhan354: 
+]3008;start=53315e845cde417d9b1762d682e00b24;user=rayhan354;hostname=archlinux-rayhan354;machineid=5ad9b462fcad4429abb6329199b5f486;bootid=515d013d25b643c8bc734b4611a0b586;pid=74345;pidfdid=86689;comm=sudo;targetuser=root;type=session\]3008;end=53315e845cde417d9b1762d682e00b24\]0;rayhan354@archlinux-rayhan354:/mnt/sdd1/Tes PT Simple Journey Indonesia/shift-test[?2004h[rayhan354@archlinux-rayhan354 shift-test]$ [7msudo nft add chain inet excludeTraffic excludeOutgoing '{ type route hook output priority 0[27m[7m;[27m[7m policy accept; }' [27m
+[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Csudo nft add chain inet excludeTraffic excludeOutgoing '{ type route hook output priority 0; policy accept; }'
+[A
+[?2004l]3008;start=76de6dfdc6a44bca967eded827e04336;user=rayhan354;hostname=archlinux-rayhan354;machineid=5ad9b462fcad4429abb6329199b5f486;bootid=515d013d25b643c8bc734b4611a0b586;pid=74488;pidfdid=76316;comm=sudo;targetuser=root;type=session\]3008;end=76de6dfdc6a44bca967eded827e04336\]0;rayhan354@archlinux-rayhan354:/mnt/sdd1/Tes PT Simple Journey Indonesia/shift-test[?2004h[rayhan354@archlinux-rayhan354 shift-test]$ [7msudo nft add rule inet excludeTraffic excludeOutgoing ip daddr 172.17.0.0/16 ct mark set 0x[27m[7m0[27m[7m0000f41 meta mark set 0x6d6f6c65[27m[A[C[C[C[C[C[C[C[C[C[C[Csudo nft add rule inet excludeTraffic excludeOutgoing ip daddr 172.17.0.0/16 ct mark set 0x00000f41 meta mark set 0x6d6f6c65[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C/16 ct mark set 0x00[C[C[C[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C1/16 ct mark set 0x0[C[C[C[1@0[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+
+[?2004l]3008;start=26ad26896e4c4313a35f3a817819a949;user=rayhan354;hostname=archlinux-rayhan354;machineid=5ad9b462fcad4429abb6329199b5f486;bootid=515d013d25b643c8bc734b4611a0b586;pid=74892;pidfdid=76371;comm=sudo;targetuser=root;type=session\]3008;end=26ad26896e4c4313a35f3a817819a949\]0;rayhan354@archlinux-rayhan354:/mnt/sdd1/Tes PT Simple Journey Indonesia/shift-test[?2004h[rayhan354@archlinux-rayhan354 shift-test]$ [7mdocker run --rm --network host -v "$(pwd)":/app -w /app golang:1.21-alpine go run test.go[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cdocker run --rm --network host -v "$(pwd)":/app -w /app golang:1.21-alpine go run test.go
+[?2004llistening on :8080
+]0;rayhan354@archlinux-rayhan354:/mnt/sdd1/Tes PT Simple Journey Indonesia/shift-test[?2004h[rayhan354@archlinux-rayhan354 shift-test]$ [7mpodman run --rm -p 8080:8080 -v "$(pwd)":/app -w /app docker.io/golang:1.21-alpine go run t[27m[7me[27m[7mst.go[27m[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cpodman run --rm -p 8080:8080 -v "$(pwd)":/app -w /app docker.io/golang:1.21-alpine go run test.go
+[?2004lbash: podman: command not found
+]0;rayhan354@archlinux-rayhan354:/mnt/sdd1/Tes PT Simple Journey Indonesia/shift-test[?2004h[rayhan354@archlinux-rayhan354 shift-test]$ [7msudo pacman -S podman[27msudo pacman -S podman
+[?2004l]3008;start=deb366ca1f2d4db18b32f585976ac770;user=rayhan354;hostname=archlinux-rayhan354;machineid=5ad9b462fcad4429abb6329199b5f486;bootid=515d013d25b643c8bc734b4611a0b586;pid=77515;pidfdid=86887;comm=sudo;targetuser=root;type=session\[?25lresolving dependencies...
+looking for conflicting packages...
+
+Packages (7) aardvark-dns-2.1.0-3  catatonit-0.2.1-2  conmon-1:2.2.1-1  containers-common-1:0.69.1-1  netavark-2.1.0-3
+             passt-2026_07_28.f8df3f1-1  podman-6.1.0-1
+
+Total Download Size:   29.19 MiB
+Total Installed Size:  96.63 MiB
+
+:: Proceed with installation? [Y/n] [?25hY
+[?25l:: Retrieving packages...
+ podman-6.1.0-1-x86_64
+ Total (0/7)                                            0.0   B  0.00   B/s 00:00 [----------------------------------------------]   0%
+[1F netavark-2.1.0-3-x86_64
+ Total (0/7)                                            0.0   B  0.00   B/s 00:00 [----------------------------------------------]   0%
+[1F aardvark-dns-2.1.0-3-x86_64
+ Total (0/7)                                            0.0   B  0.00   B/s 00:00 [----------------------------------------------]   0%
+[1F catatonit-0.2.1-2-x86_64
+ Total (0/7)                                            0.0   B  0.00   B/s 00:00 [----------------------------------------------]   0%
+[1F passt-2026_07_28.f8df3f1-1-x86_64
+ Total (0/7)                                            0.0   B  0.00   B/s 00:00 [----------------------------------------------]   0%
+[6F podman-6.1.0-1-x86_64                               1360.0   B  0.00   B/s --:-- [----------------------------------------------]   0%[5E Total (0/7)                                         1360.0   B  0.00   B/s --:-- [----------------------------------------------]   0%[4F netavark-2.1.0-3-x86_64                                0.0   B  0.00   B/s --:-- [----------------------------------------------]   0%[2E catatonit-0.2.1-2-x86_64                               5.3 KiB  0.00   B/s --:-- [----------------------------------------------]   1%[1F aardvark-dns-2.1.0-3-x86_64                            5.3 KiB  0.00   B/s --:-- [----------------------------------------------]   0%[2E passt-2026_07_28.f8df3f1-1-x86_64                      0.0   B  0.00   B/s --:-- [----------------------------------------------]   0%[4F podman-6.1.0-1-x86_64                                150.9 KiB   249 KiB/s 01:40 [----------------------------------------------]   0%[5E Total (0/7)                                          621.3 KiB  1033 KiB/s 00:28 [----------------------------------------------]   2%[4F netavark-2.1.0-3-x86_64                              152.0 KiB   253 KiB/s 00:11 [#---------------------------------------------]   4%[2E catatonit-0.2.1-2-x86_64                             117.1 KiB   186 KiB/s 00:01 [################------------------------------]  36%[1F aardvark-dns-2.1.0-3-x86_64                          117.5 KiB   187 KiB/s 00:03 [######----------------------------------------]  14%[2E passt-2026_07_28.f8df3f1-1-x86_64                    116.1 KiB   194 KiB/s 00:00 [#################-----------------------------]  39%[1F podman-6.1.0-1-x86_64                                150.9 KiB   249 KiB/s 01:40 [----------------------------------------------]   0%[3F catatonit-0.2.1-2-x86_64                             316.6 KiB   258 KiB/s 00:01 [##############################################] 100%[5E containers-common-1:0.69.1-1-any
+ Total (1/7)                                          621.3 KiB  1033 KiB/s 00:28 [----------------------------------------------]   2%
+[3F netavark-2.1.0-3-x86_64                              152.0 KiB   253 KiB/s 00:11 [#---------------------------------------------]   4%[3F passt-2026_07_28.f8df3f1-1-x86_64                    295.1 KiB   240 KiB/s 00:01 [##############################################] 100%[5E conmon-1:2.2.1-1-x86_64
+ Total (2/7)                                          621.3 KiB  1033 KiB/s 00:28 [----------------------------------------------]   2%
+[5F podman-6.1.0-1-x86_64                                746.0 KiB  1158 KiB/s 00:21 [----------------------------------------------]   2%[4E Total (2/7)                                            2.5 MiB  3.83 MiB/s 00:06 [###-------------------------------------------]   8%[3F netavark-2.1.0-3-x86_64                              784.0 KiB  1222 KiB/s 00:01 [###########-----------------------------------]  24%[2F aardvark-dns-2.1.0-3-x86_64                          563.6 KiB   868 KiB/s 00:00 [################################--------------]  70% aardvark-dns-2.1.0-3-x86_64                          803.7 KiB   586 KiB/s 00:01 [##############################################] 100%[3E containers-common-1:0.69.1-1-any                       0.0   B  0.00   B/s --:-- [----------------------------------------------]   0%[1E conmon-1:2.2.1-1-x86_64                                0.0   B  0.00   B/s --:-- [----------------------------------------------]   0%[1F podman-6.1.0-1-x86_64                                746.0 KiB  1158 KiB/s 00:21 [----------------------------------------------]   2%[2F containers-common-1:0.69.1-1-any                     121.3 KiB   472 KiB/s 00:00 [##############################################] 100%[1E netavark-2.1.0-3-x86_64                                3.1 MiB  2.07 MiB/s 00:01 [##############################################] 100%[2E podman-6.1.0-1-x86_64                                746.0 KiB  1158 KiB/s 00:21 [----------------------------------------------]   2%[1F conmon-1:2.2.1-1-x86_64                               38.3 KiB   144 KiB/s 00:00 [##############################################] 100%[1E podman-6.1.0-1-x86_64                                  3.3 MiB  5.03 MiB/s 00:04 [#####-----------------------------------------]  13%[1E Total (6/7)                                            7.9 MiB  11.6 MiB/s 00:01 [############----------------------------------]  27%[1F podman-6.1.0-1-x86_64                                  6.5 MiB  8.65 MiB/s 00:02 [###########-----------------------------------]  26%[1E Total (6/7)                                           11.1 MiB  13.0 MiB/s 00:01 [#################-----------------------------]  38%[1F podman-6.1.0-1-x86_64                                 10.5 MiB  12.5 MiB/s 00:01 [###################---------------------------]  42%[1E Total (6/7)                                           15.2 MiB  15.4 MiB/s 00:00 [#######################-----------------------]  51%[1F podman-6.1.0-1-x86_64                                 16.6 MiB  18.5 MiB/s 00:00 [##############################----------------]  67%[1E Total (6/7)                                           21.3 MiB  20.4 MiB/s 00:00 [#################################-------------]  72%[1F podman-6.1.0-1-x86_64                                 24.6 MiB  10.8 MiB/s 00:02 [##############################################] 100%[1E Total (7/7)                                           29.2 MiB  12.8 MiB/s 00:02 [##############################################] 100%
+(0/7) checking keys in keyring                                                    [----------------------------------------------]   0%(1/7) checking keys in keyring                                                    [######----------------------------------------]  14%(2/7) checking keys in keyring                                                    [############----------------------------------]  28%(3/7) checking keys in keyring                                                    [###################---------------------------]  42%(4/7) checking keys in keyring                                                    [##########################--------------------]  57%(5/7) checking keys in keyring                                                    [################################--------------]  71%(6/7) checking keys in keyring                                                    [#######################################-------]  85%(7/7) checking keys in keyring                                                    [##############################################] 100%
+(0/7) checking package integrity                                                  [----------------------------------------------]   0%(1/7) checking package integrity                                                  [----------------------------------------------]   1%(2/7) checking package integrity                                                  [----------------------------------------------]   1%(3/7) checking package integrity                                                  [#---------------------------------------------]   3%(4/7) checking package integrity                                                  [######----------------------------------------]  14%(5/7) checking package integrity                                                  [######----------------------------------------]  14%(6/7) checking package integrity                                                  [######----------------------------------------]  15%(7/7) checking package integrity                                                  [##############################################] 100%
+(0/7) loading package files                                                       [----------------------------------------------]   0%(1/7) loading package files                                                       [----------------------------------------------]   1%(2/7) loading package files                                                       [----------------------------------------------]   1%(3/7) loading package files                                                       [#---------------------------------------------]   3%(4/7) loading package files                                                       [######----------------------------------------]  14%(5/7) loading package files                                                       [######----------------------------------------]  14%(6/7) loading package files                                                       [######----------------------------------------]  15%(7/7) loading package files                                                       [##############################################] 100%
+(0/7) checking for file conflicts                                                 [----------------------------------------------]   0%(1/7) checking for file conflicts                                                 [######----------------------------------------]  14%(2/7) checking for file conflicts                                                 [############----------------------------------]  28%(3/7) checking for file conflicts                                                 [###################---------------------------]  42%(4/7) checking for file conflicts                                                 [##########################--------------------]  57%(5/7) checking for file conflicts                                                 [################################--------------]  71%(6/7) checking for file conflicts                                                 [#######################################-------]  85%(7/7) checking for file conflicts                                                 [##############################################] 100%
+(0/7) checking available disk space                                               [----------------------------------------------]   0%(1/7) checking available disk space                                               [######----------------------------------------]  14%(2/7) checking available disk space                                               [############----------------------------------]  28%(3/7) checking available disk space                                               [###################---------------------------]  42%(4/7) checking available disk space                                               [##########################--------------------]  57%(5/7) checking available disk space                                               [################################--------------]  71%(6/7) checking available disk space                                               [#######################################-------]  85%(7/7) checking available disk space                                               [##############################################] 100%
+:: Processing package changes...
+(1/7) installing catatonit                                                        [----------------------------------------------]   0%(1/7) installing catatonit                                                        [##############################################] 100%
+(2/7) installing conmon                                                           [----------------------------------------------]   0%(2/7) installing conmon                                                           [##############################################] 100%
+(3/7) installing aardvark-dns                                                     [----------------------------------------------]   0%(3/7) installing aardvark-dns                                                     [##############################################] 100%
+(4/7) installing netavark                                                         [----------------------------------------------]   0%(4/7) installing netavark                                                         [----------------------------------------------]   0%(4/7) installing netavark                                                         [----------------------------------------------]   0%(4/7) installing netavark                                                         [----------------------------------------------]   0%(4/7) installing netavark                                                         [----------------------------------------------]   0%(4/7) installing netavark                                                         [----------------------------------------------]   0%(4/7) installing netavark                                                         [----------------------------------------------]   0%(4/7) installing netavark                                                         [----------------------------------------------]   0%(4/7) installing netavark                                                         [##############################################] 100%
+(5/7) installing containers-common                                                [----------------------------------------------]   0%(5/7) installing containers-common                                                [##############################################] 100%
+(6/7) installing passt                                                            [----------------------------------------------]   0%(6/7) installing passt                                                            [##############################################] 100%
+Optional dependencies for passt
+    sh: for demo script [installed]
+(7/7) installing podman                                                           [----------------------------------------------]   0%(7/7) installing podman                                                           [----------------------------------------------]   0%(7/7) installing podman                                                           [----------------------------------------------]   0%(7/7) installing podman                                                           [----------------------------------------------]   0%(7/7) installing podman                                                           [----------------------------------------------]   0%(7/7) installing podman                                                           [----------------------------------------------]   0%(7/7) installing podman                                                           [----------------------------------------------]   0%(7/7) installing podman                                                           [##############################################] 100%
+Optional dependencies for podman
+    apparmor: for AppArmor support
+    btrfs-progs: support btrfs backend devices
+    fuse-overlayfs: for deprecated storage driver in rootless environment
+    podlet: Generate Podman Quadlet files from a Podman command, compose file, or existing object
+    podman-compose: for docker-compose compatibility
+    podman-desktop: GUI and tray to manage Podman containers (and Kubernetes pods)
+    podman-docker: for Docker-compatible CLI
+:: Running post-transaction hooks...
+(1/4) Creating temporary files...
+(2/4) Reloading system manager configuration...
+(3/4) Reloading user manager configuration...
+(4/4) Arming ConditionNeedsUpdate...
+[?25h]3008;end=deb366ca1f2d4db18b32f585976ac770\]0;rayhan354@archlinux-rayhan354:/mnt/sdd1/Tes PT Simple Journey Indonesia/shift-test[?2004h[rayhan354@archlinux-rayhan354 shift-test]$ [7mpodman run --rm -p 8080:8080 -v "$(pwd)":/app -w /app docker.io/golang:1.21-alpine go run t[27m[7me[27m[7mst.go [27m
+[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cpodman run --rm -p 8080:8080 -v "$(pwd)":/app -w /app docker.io/golang:1.21-alpine go run test.go
+[A
+[?2004lTrying to pull docker.io/library/golang:1.21-alpine...
+Getting image source signatures
+Copying blob 4f4fb700ef54 [--------------------------------------] 0.0b / 32.0b
+[1A[JCopying blob 4f4fb700ef54 [--------------------------------------] 0.0b / 32.0b
+[1A[JCopying blob 4f4fb700ef54 [--------------------------------------] 0.0b / 32.0b | 0.0 b/s
+Copying blob c6a83fedfae6 [--------------------------------------] 0.0b / 3.5MiB
+Copying blob c6a83fedfae6 [--------------------------------------] 0.0b / 3.5MiB | 0.0 b/s
+Copying blob 54bf7053e2d9 [--------------------------------------] 0.0b / 63.9MiB
+Copying blob 54bf7053e2d9 [--------------------------------------] 0.0b / 63.9MiB | 0.0 b/s
+Copying blob 41db7493d1c6 [--------------------------------------] 0.0b / 284.1KiB
+Copying blob 41db7493d1c6 [--------------------------------------] 0.0b / 284.1KiB | 0.0 b/s
+Copying blob 4579008f8500 [--------------------------------------] 0.0b / 126.0b
+Copying blob 4579008f8500 [--------------------------------------] 0.0b / 126.0b | 0.0 b/s
+[9A[JCopying blob 4f4fb700ef54 [--------------------------------------] 0.0b / 32.0b | 0.0 b/s
+Copying blob c6a83fedfae6 [--------------------------------------] 0.0b / 3.5MiB
+Copying blob c6a83fedfae6 [--------------------------------------] 0.0b / 3.5MiB | 0.0 b/s
+Copying blob 54bf7053e2d9 [--------------------------------------] 0.0b / 63.9MiB
+Copying blob 54bf7053e2d9 [--------------------------------------] 0.0b / 63.9MiB | 0.0 b/s
+Copying blob 41db7493d1c6 [--------------------------------------] 0.0b / 284.1KiB
+Copying blob 41db7493d1c6 [--------------------------------------] 0.0b / 284.1KiB | 0.0 b/s
+Copying blob 4579008f8500 [--------------------------------------] 0.0b / 126.0b
+Copying blob 4579008f8500 [--------------------------------------] 0.0b / 126.0b | 0.0 b/s
+[9A[JCopying blob 4f4fb700ef54 done   | 
+Copying blob c6a83fedfae6 [--------------------------------------] 0.0b / 3.5MiB | 0.0 b/s
+Copying blob 54bf7053e2d9 [--------------------------------------] 0.0b / 63.9MiB | 0.0 b/s
+Copying blob 41db7493d1c6 [--------------------------------------] 0.0b / 284.1KiB | 0.0 b/s
+Copying blob 4579008f8500 [--------------------------------------] 0.0b / 126.0b | 0.0 b/s
+[5A[JCopying blob 4f4fb700ef54 done   | 
+Copying blob c6a83fedfae6 [--------------------------------------] 0.0b / 3.5MiB | 0.0 b/s
+Copying blob 54bf7053e2d9 [--------------------------------------] 0.0b / 63.9MiB | 0.0 b/s
+Copying blob 41db7493d1c6 [--------------------------------------] 0.0b / 284.1KiB | 0.0 b/s
+Copying blob 4579008f8500 [--------------------------------------] 0.0b / 126.0b | 0.0 b/s
+[5A[JCopying blob 4f4fb700ef54 done   | 
+Copying blob c6a83fedfae6 [--------------------------------------] 31.4KiB / 3.5MiB | 7.7 MiB/s
+Copying blob 54bf7053e2d9 [--------------------------------------] 0.0b / 63.9MiB | 0.0 b/s
+Copying blob 41db7493d1c6 [--------------------------------------] 0.0b / 284.1KiB | 0.0 b/s
+Copying blob 4579008f8500 [--------------------------------------] 0.0b / 126.0b | 0.0 b/s
+[5A[JCopying blob 4f4fb700ef54 done   | 
+Copying blob c6a83fedfae6 [=>------------------------------------] 159.4KiB / 3.5MiB | 1.5 MiB/s
+Copying blob 54bf7053e2d9 [--------------------------------------] 0.0b / 63.9MiB | 0.0 b/s
+Copying blob 41db7493d1c6 [--------------------------------------] 0.0b / 284.1KiB | 0.0 b/s
+Copying blob 4579008f8500 [--------------------------------------] 0.0b / 126.0b | 0.0 b/s
+[5A[JCopying blob 4f4fb700ef54 done   | 
+Copying blob c6a83fedfae6 [====>---------------------------------] 495.4KiB / 3.5MiB | 2.1 MiB/s
+Copying blob 54bf7053e2d9 [--------------------------------------] 0.0b / 63.9MiB | 0.0 b/s
+Copying blob 41db7493d1c6 [--------------------------------------] 0.0b / 284.1KiB | 0.0 b/s
+Copying blob 4579008f8500 [--------------------------------------] 0.0b / 126.0b | 0.0 b/s
+[5A[JCopying blob 4f4fb700ef54 done   | 
+Copying blob c6a83fedfae6 [===============>----------------------] 1.5MiB / 3.5MiB | 9.7 MiB/s
+Copying blob 54bf7053e2d9 [--------------------------------------] 0.0b / 63.9MiB | 0.0 b/s
+Copying blob 41db7493d1c6 [--------------------------------------] 0.0b / 284.1KiB | 0.0 b/s
+Copying blob 4579008f8500 [--------------------------------------] 0.0b / 126.0b | 0.0 b/s
+[5A[JCopying blob 4f4fb700ef54 done   | 
+Copying blob c6a83fedfae6 done   | 
+Copying blob 54bf7053e2d9 [--------------------------------------] 0.0b / 63.9MiB | 0.0 b/s
+Copying blob 41db7493d1c6 [--------------------------------------] 0.0b / 284.1KiB | 0.0 b/s
+Copying blob 4579008f8500 [--------------------------------------] 0.0b / 126.0b | 0.0 b/s
+[5A[JCopying blob 4f4fb700ef54 done   | 
+Copying blob c6a83fedfae6 done   | 
+Copying blob 54bf7053e2d9 [--------------------------------------] 15.3KiB / 63.9MiB | 7.9 MiB/s
+Copying blob 41db7493d1c6 [--------------------------------------] 0.0b / 284.1KiB | 0.0 b/s
+Copying blob 4579008f8500 done   | 
+[5A[JCopying blob 4f4fb700ef54 done   | 
+Copying blob c6a83fedfae6 done   | 
+Copying blob 54bf7053e2d9 [--------------------------------------] 31.3KiB / 63.9MiB | 3.9 MiB/s
+Copying blob 41db7493d1c6 [===>----------------------------------] 31.4KiB / 284.1KiB | 5.0 MiB/s
+Copying blob 4579008f8500 done   | 
+[5A[JCopying blob 4f4fb700ef54 done   | 
+Copying blob c6a83fedfae6 done   | 
+Copying blob 54bf7053e2d9 [--------------------------------------] 79.3KiB / 63.9MiB | 879.4 KiB/s
+Copying blob 41db7493d1c6 [==========>---------------------------] 79.4KiB / 284.1KiB | 927.6 KiB/s
+Copying blob 4579008f8500 done   | 
+[5A[JCopying blob 4f4fb700ef54 done   | 
+Copying blob c6a83fedfae6 done   | 
+Copying blob 54bf7053e2d9 [--------------------------------------] 95.3KiB / 63.9MiB | 609.7 KiB/s
+Copying blob 41db7493d1c6 [============>-------------------------] 95.4KiB / 284.1KiB | 636.3 KiB/s
+Copying blob 4579008f8500 done   | 
+[5A[JCopying blob 4f4fb700ef54 done   | 
+Copying blob c6a83fedfae6 done   | 
+Copying blob 54bf7053e2d9 [--------------------------------------] 175.3KiB / 63.9MiB | 586.6 KiB/s
+Copying blob 41db7493d1c6 [======================>---------------] 175.4KiB / 284.1KiB | 607.5 KiB/s
+Copying blob 4579008f8500 done   | 
+[5A[JCopying blob 4f4fb700ef54 done   | 
+Copying blob c6a83fedfae6 done   | 
+Copying blob 54bf7053e2d9 [--------------------------------------] 271.3KiB / 63.9MiB | 605.3 KiB/s
+Copying blob 41db7493d1c6 done   | 
+Copying blob 4579008f8500 done   | 
+[5A[JCopying blob 4f4fb700ef54 done   | 
+Copying blob c6a83fedfae6 done   | 
+Copying blob 54bf7053e2d9 [--------------------------------------] 415.3KiB / 63.9MiB | 724.7 KiB/s
+Copying blob 41db7493d1c6 done   | 
+Copying blob 4579008f8500 done   | 
+[5A[JCopying blob 4f4fb700ef54 done   | 
+Copying blob c6a83fedfae6 done   | 
+Copying blob 54bf7053e2d9 [--------------------------------------] 687.3KiB / 63.9MiB | 1.2 MiB/s
+Copying blob 41db7493d1c6 done   | 
+Copying blob 4579008f8500 done   | 
+[5A[JCopying blob 4f4fb700ef54 done   | 
+Copying blob c6a83fedfae6 done   | 
+Copying blob 54bf7053e2d9 [>-------------------------------------] 1.0MiB / 63.9MiB | 2.2 MiB/s
+Copying blob 41db7493d1c6 done   | 
+Copying blob 4579008f8500 done   | 
+[5A[JCopying blob 4f4fb700ef54 done   | 
+Copying blob c6a83fedfae6 done   | 
+Copying blob 54bf7053e2d9 [>-------------------------------------] 1.7MiB / 63.9MiB | 4.4 MiB/s
+Copying blob 41db7493d1c6 done   | 
+Copying blob 4579008f8500 done   | 
+[5A[JCopying blob 4f4fb700ef54 done   | 
+Copying blob c6a83fedfae6 done   | 
+Copying blob 54bf7053e2d9 [=>------------------------------------] 2.6MiB / 63.9MiB | 7.8 MiB/s
+Copying blob 41db7493d1c6 done   | 
+Copying blob 4579008f8500 done   | 
+[5A[JCopying blob 4f4fb700ef54 done   | 
+Copying blob c6a83fedfae6 done   | 
+Copying blob 54bf7053e2d9 [=>------------------------------------] 4.1MiB / 63.9MiB | 14.9 MiB/s
+Copying blob 41db7493d1c6 done   | 
+Copying blob 4579008f8500 done   | 
+[5A[JCopying blob 4f4fb700ef54 done   | 
+Copying blob c6a83fedfae6 done   | 
+Copying blob 54bf7053e2d9 [===>----------------------------------] 6.5MiB / 63.9MiB | 24.5 MiB/s
+Copying blob 41db7493d1c6 done   | 
+Copying blob 4579008f8500 done   | 
+[5A[JCopying blob 4f4fb700ef54 done   | 
+Copying blob c6a83fedfae6 done   | 
+Copying blob 54bf7053e2d9 [=====>--------------------------------] 10.2MiB / 63.9MiB | 40.7 MiB/s
+Copying blob 41db7493d1c6 done   | 
+Copying blob 4579008f8500 done   | 
+[5A[JCopying blob 4f4fb700ef54 done   | 
+Copying blob c6a83fedfae6 done   | 
+Copying blob 54bf7053e2d9 [=========>----------------------------] 16.0MiB / 63.9MiB | 103.6 MiB/s
+Copying blob 41db7493d1c6 done   | 
+Copying blob 4579008f8500 done   | 
+[5A[JCopying blob 4f4fb700ef54 done   | 
+Copying blob c6a83fedfae6 done   | 
+Copying blob 54bf7053e2d9 [============>-------------------------] 22.5MiB / 63.9MiB | 76.6 MiB/s
+Copying blob 41db7493d1c6 done   | 
+Copying blob 4579008f8500 done   | 
+[5A[JCopying blob 4f4fb700ef54 done   | 
+Copying blob c6a83fedfae6 done   | 
+Copying blob 54bf7053e2d9 [=================>--------------------] 29.6MiB / 63.9MiB | 205.5 MiB/s
+Copying blob 41db7493d1c6 done   | 
+Copying blob 4579008f8500 done   | 
+[5A[JCopying blob 4f4fb700ef54 done   | 
+Copying blob c6a83fedfae6 done   | 
+Copying blob 54bf7053e2d9 [====================>-----------------] 35.4MiB / 63.9MiB | 144.1 MiB/s
+Copying blob 41db7493d1c6 done   | 
+Copying blob 4579008f8500 done   | 
+[5A[JCopying blob 4f4fb700ef54 done   | 
+Copying blob c6a83fedfae6 done   | 
+Copying blob 54bf7053e2d9 [========================>-------------] 42.0MiB / 63.9MiB | 85.0 MiB/s
+Copying blob 41db7493d1c6 done   | 
+Copying blob 4579008f8500 done   | 
+[5A[JCopying blob 4f4fb700ef54 done   | 
+Copying blob c6a83fedfae6 done   | 
+Copying blob 54bf7053e2d9 [============================>---------] 48.9MiB / 63.9MiB | 161.9 MiB/s
+Copying blob 41db7493d1c6 done   | 
+Copying blob 4579008f8500 done   | 
+[5A[JCopying blob 4f4fb700ef54 done   | 
+Copying blob c6a83fedfae6 done   | 
+Copying blob 54bf7053e2d9 [================================>-----] 54.8MiB / 63.9MiB | 100.8 MiB/s
+Copying blob 41db7493d1c6 done   | 
+Copying blob 4579008f8500 done   | 
+[5A[JCopying blob 4f4fb700ef54 done   | 
+Copying blob c6a83fedfae6 done   | 
+Copying blob 54bf7053e2d9 [====================================>-] 61.5MiB / 63.9MiB | 71.6 MiB/s
+Copying blob 41db7493d1c6 done   | 
+Copying blob 4579008f8500 done   | 
+[5A[JCopying blob 4f4fb700ef54 done   | 
+Copying blob c6a83fedfae6 done   | 
+Copying blob 54bf7053e2d9 done   | 
+Copying blob 41db7493d1c6 done   | 
+Copying blob 4579008f8500 done   | 
+[5A[JCopying blob 4f4fb700ef54 done   | 
+Copying blob c6a83fedfae6 done   | 
+Copying blob 54bf7053e2d9 done   | 
+Copying blob 41db7493d1c6 done   | 
+Copying blob 4579008f8500 done   | 
+[5A[JCopying blob 4f4fb700ef54 done   | 
+Copying blob c6a83fedfae6 done   | 
+Copying blob 54bf7053e2d9 done   | 
+Copying blob 41db7493d1c6 done   | 
+Copying blob 4579008f8500 done   | 
+[5A[JCopying blob 4f4fb700ef54 done   | 
+Copying blob c6a83fedfae6 done   | 
+Copying blob 54bf7053e2d9 done   | 
+Copying blob 41db7493d1c6 done   | 
+Copying blob 4579008f8500 done   | 
+[5A[JCopying blob 4f4fb700ef54 done   | 
+Copying blob c6a83fedfae6 done   | 
+Copying blob 54bf7053e2d9 done   | 
+Copying blob 41db7493d1c6 done   | 
+Copying blob 4579008f8500 done   | 
+[5A[JCopying blob 4f4fb700ef54 done   | 
+Copying blob c6a83fedfae6 done   | 
+Copying blob 54bf7053e2d9 done   | 
+Copying blob 41db7493d1c6 done   | 
+Copying blob 4579008f8500 done   | 
+[5A[JCopying blob 4f4fb700ef54 done   | 
+Copying blob c6a83fedfae6 done   | 
+Copying blob 54bf7053e2d9 done   | 
+Copying blob 41db7493d1c6 done   | 
+Copying blob 4579008f8500 done   | 
+[5A[JCopying blob 4f4fb700ef54 done   | 
+Copying blob c6a83fedfae6 done   | 
+Copying blob 54bf7053e2d9 done   | 
+Copying blob 41db7493d1c6 done   | 
+Copying blob 4579008f8500 done   | 
+[5A[JCopying blob 4f4fb700ef54 done   | 
+Copying blob c6a83fedfae6 done   | 
+Copying blob 54bf7053e2d9 done   | 
+Copying blob 41db7493d1c6 done   | 
+Copying blob 4579008f8500 done   | 
+[5A[JCopying blob 4f4fb700ef54 done   | 
+Copying blob c6a83fedfae6 done   | 
+Copying blob 54bf7053e2d9 done   | 
+Copying blob 41db7493d1c6 done   | 
+Copying blob 4579008f8500 done   | 
+Copying config c2321c7cf7 done   | 
+[1A[JCopying config c2321c7cf7 done   | 
+Writing manifest to image destination
+Error: pasta failed with exit code 1:
+Listen failed for HOST TCP port */8080: Address already in use
+Couldn't listen on requested ports
+
+]0;rayhan354@archlinux-rayhan354:/mnt/sdd1/Tes PT Simple Journey Indonesia/shift-test[?2004h[rayhan354@archlinux-rayhan354 shift-test]$ [7msudo ss -tulpn | grep :8080[27msudo ss -tulpn | grep :8080
+[?2004ltcp   LISTEN 0      4096                              0.0.0.0[01;31m[K:8080[m[K       0.0.0.0:*    users:(("docker-proxy",pid=53045,fd=7))
+]0;rayhan354@archlinux-rayhan354:/mnt/sdd1/Tes PT Simple Journey Indonesia/shift-test[?2004h[rayhan354@archlinux-rayhan354 shift-test]$ docker stop 53045
+[?2004lError response from daemon: No such container: 53045
+]0;rayhan354@archlinux-rayhan354:/mnt/sdd1/Tes PT Simple Journey Indonesia/shift-test[?2004h[rayhan354@archlinux-rayhan354 shift-test]$ docker stop 53045[K[K[K[K[K7
+[?2004l7
+]0;rayhan354@archlinux-rayhan354:/mnt/sdd1/Tes PT Simple Journey Indonesia/shift-test[?2004h[r

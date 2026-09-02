@@ -1,0 +1,469 @@
+Script started on 2026-09-02 20:18:04+07:00 [TERM="xterm-256color" COLUMNS="135" LINES="29"]
+]0;rayhan354@archlinux-rayhan354:~[?2004h[rayhan354@archlinux-rayhan354 ~]$ [7mgo test ./...[27mgo test ./...
+[?2004l# ./...
+pattern ./...: directory prefix . does not contain main module or its selected dependencies
+FAIL	./... [setup failed]
+FAIL
+]0;rayhan354@archlinux-rayhan354:~[?2004h[rayhan354@archlinux-rayhan354 ~]$ cd ""[7m/mnt/sdd1/Tes PT Simple Journey Indonesia/shift-test/[27m"[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C/mnt/sdd1/Tes PT Simple Journey Indonesia/shift-test/[C
+[?2004l]0;rayhan354@archlinux-rayhan354:/mnt/sdd1/Tes PT Simple Journey Indonesia/shift-test[?2004h[rayhan354@archlinux-rayhan354 shift-test]$ cd "/mnt/sdd1/Tes PT Simple Journey Indonesia/shift-test/"[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgo test ./...[K
+[?2004lok  	shift-test	0.002s
+]0;rayhan354@archlinux-rayhan354:/mnt/sdd1/Tes PT Simple Journey Indonesia/shift-test[?2004h[rayhan354@archlinux-rayhan354 shift-test]$ [7mgit init[27mgit init
+[?2004l[33mhint: Using 'master' as the name for the initial branch. This default branch name[m
+[33mhint: will change to "main" in Git 3.0. To configure the initial branch name[m
+[33mhint: to use in all of your new repositories, which will suppress this warning,[m
+[33mhint: call:[m
+[33mhint:[m
+[33mhint: 	git config --global init.defaultBranch <name>[m
+[33mhint:[m
+[33mhint: Names commonly chosen instead of 'master' are 'main', 'trunk' and[m
+[33mhint: 'development'. The just-created branch can be renamed via this command:[m
+[33mhint:[m
+[33mhint: 	git branch -m <name>[m
+[33mhint:[m
+[33mhint: Disable this message with "git config set advice.defaultBranchName false"[m
+Initialized empty Git repository in /mnt/sdd1/Tes PT Simple Journey Indonesia/shift-test/.git/
+]0;rayhan354@archlinux-rayhan354:/mnt/sdd1/Tes PT Simple Journey Indonesia/shift-test[?2004h[rayhan354@archlinux-rayhan354 shift-test]$ [7mgit add main.go main_test.go Dockerfile README*.md[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgit add main.go main_test.go Dockerfile README*.md[K[K[K[K[K[K[K[K[K[K[K
+[?2004l]0;rayhan354@archlinux-rayhan354:/mnt/sdd1/Tes PT Simple Journey Indonesia/shift-test[?2004h[rayhan354@archlinux-rayhan354 shift-test]$ [7mgit commit -m "Add test and finalize code"[27mgit commit -m "Add test and finalize code"
+[?2004l[master (root-commit) 7c170cf] Add test and finalize code
+ 3 files changed, 70 insertions(+)
+ create mode 100644 Dockerfile
+ create mode 100644 main.go
+ create mode 100644 main_test.go
+]0;rayhan354@archlinux-rayhan354:/mnt/sdd1/Tes PT Simple Journey Indonesia/shift-test[?2004h[rayhan354@archlinux-rayhan354 shift-test]$ [7mgit remote add origin https://github.com/rayhan354/technical-test-shift-engineer.git[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgit remote add origin https://github.com/rayhan354/technical-test-shift-engineer.git
+[?2004l]0;rayhan354@archlinux-rayhan354:/mnt/sdd1/Tes PT Simple Journey Indonesia/shift-test[?2004h[rayhan354@archlinux-rayhan354 shift-test]$ [7mgit branch -M main[27mgit branch -M main
+[?2004l]0;rayhan354@archlinux-rayhan354:/mnt/sdd1/Tes PT Simple Journey Indonesia/shift-test[?2004h[rayhan354@archlinux-rayhan354 shift-test]$ [7mgit push -u origin main[27mgit push -u origin main
+[?2004lUsername for 'https://github.com': rayhan354
+Password for 'https://rayhan354@github.com': 
+remote: Invalid username or token. Password authentication is not supported for Git operations.
+fatal: Authentication failed for 'https://github.com/rayhan354/technical-test-shift-engineer.git/'
+]0;rayhan354@archlinux-rayhan354:/mnt/sdd1/Tes PT Simple Journey Indonesia/shift-test[?2004h[rayhan354@archlinux-rayhan354 shift-test]$ git push -u origin main
+[?2004lUsername for 'https://github.com': rayhan354
+Password for 'https://rayhan354@github.com': 
+Enumerating objects: 5, done.
+Counting objects:  20% (1/5)Counting objects:  40% (2/5)Counting objects:  60% (3/5)Counting objects:  80% (4/5)Counting objects: 100% (5/5)Counting objects: 100% (5/5), done.
+Delta compression using up to 16 threads
+Compressing objects:  20% (1/5)Compressing objects:  40% (2/5)Compressing objects:  60% (3/5)Compressing objects:  80% (4/5)Compressing objects: 100% (5/5)Compressing objects: 100% (5/5), done.
+Writing objects:  20% (1/5)Writing objects:  40% (2/5)Writing objects:  60% (3/5)Writing objects:  80% (4/5)Writing objects: 100% (5/5)Writing objects: 100% (5/5), 1.11 KiB | 1.11 MiB/s, done.
+Total 5 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/rayhan354/technical-test-shift-engineer.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+]0;rayhan354@archlinux-rayhan354:/mnt/sdd1/Tes PT Simple Journey Indonesia/shift-test[?2004h[rayhan354@archlinux-rayhan354 shift-test]$ [7msudo systemctl start jenkins[27m
+[7msudo systemctl enable jenkins[27m[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Csudo systemctl start jenkins
+sudo systemctl enable jenkins
+[?2004l[sudo] password for rayhan354: 
+]3008;start=67e75e02699e4b9c97997eaf3afdec85;user=rayhan354;hostname=archlinux-rayhan354;machineid=5ad9b462fcad4429abb6329199b5f486;bootid=515d013d25b643c8bc734b4611a0b586;pid=138474;pidfdid=97799;comm=sudo;targetuser=root;type=session\]3008;end=67e75e02699e4b9c97997eaf3afdec85\]3008;start=3fc6834a16ed404cb90c3a8712979212;user=rayhan354;hostname=archlinux-rayhan354;machineid=5ad9b462fcad4429abb6329199b5f486;bootid=515d013d25b643c8bc734b4611a0b586;pid=138511;pidfdid=158333;comm=sudo;targetuser=root;type=session\]3008;end=3fc6834a16ed404cb90c3a8712979212\]0;rayhan354@archlinux-rayhan354:/mnt/sdd1/Tes PT Simple Journey Indonesia/shift-test[?2004h[rayhan354@archlinux-rayhan354 shift-test]$ [7msudo cat /var/lib/jenkins/secrets/initialAdminPassword[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Csudo cat /var/lib/jenkins/secrets/initialAdminPassword
+[?2004l]3008;start=d4135af6c2ec4d89a043dea43a9e927c;user=rayhan354;hostname=archlinux-rayhan354;machineid=5ad9b462fcad4429abb6329199b5f486;bootid=515d013d25b643c8bc734b4611a0b586;pid=138747;pidfdid=97806;comm=sudo;targetuser=root;type=session\d832e175a5464968ae1b4f067d5249ee
+]3008;end=d4135af6c2ec4d89a043dea43a9e927c\]0;rayhan354@archlinux-rayhan354:/mnt/sdd1/Tes PT Simple Journey Indonesia/shift-test[?2004h[rayhan354@archlinux-rayhan354 shift-test]$ docker ps
+[?2004lCONTAINER ID   IMAGE         COMMAND   CREATED             STATUS             PORTS                    NAMES
+3204935d7783   myapp:1.0.0   "/app"    About an hour ago   Up About an hour   0.0.0.0:8080->8080/tcp   myapp
+]0;rayhan354@archlinux-rayhan354:/mnt/sdd1/Tes PT Simple Journey Indonesia/shift-test[?2004h[rayhan354@archlinux-rayhan354 shift-test]$ [7mdocker stop myapp[27m
+[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cdocker stop myapp
+[A
+[?2004lmyapp
+]0;rayhan354@archlinux-rayhan354:/mnt/sdd1/Tes PT Simple Journey Indonesia/shift-test[?2004h[rayhan354@archlinux-rayhan354 shift-test]$ [7msudo systemctl status jenkins[27msudo systemctl status jenkins
+[?2004l[sudo] password for rayhan354: 
+]3008;start=3a3d82d563ca403abdbcb715eccb24d6;user=rayhan354;hostname=archlinux-rayhan354;machineid=5ad9b462fcad4429abb6329199b5f486;bootid=515d013d25b643c8bc734b4611a0b586;pid=140585;pidfdid=109007;comm=sudo;targetuser=root;type=session\[0;1;32m●[0m jenkins.service - Extendable continuous integration server
+     Loaded: loaded (]8;;file://archlinux-rayhan354/usr/lib/systemd/system/jenkins.service\/usr/lib/systemd/system/jenkins.service]8;;\; [0;1;32menabled[0m; preset: [0;1;38:5:185mdisabled[0m)
+     Active: [0;1;32mactive (running)[0m since Wed 2026-09-02 17:43:49 WIB; 2h 57min ago
+ Invocation: b1a3e47ef9014c68a4dd588cc7cf5d97
+   Main PID: 880 (sh)
+      Tasks: 57[0;38:5:245m (limit: 38348)[0m
+     Memory: 414.6M (peak: 417.1M)
+        CPU: 11.653s
+     CGroup: /system.slice/jenkins.service
+             ├─[0;38:5:245m880 /bin/sh -c "eval \$JENKINS_COMMAND_LINE"[0m
+             └─[0;38:5:245m898 /usr/lib/jvm/java-21-openjdk/bin/java -Xmx512m -jar /usr/share/java/jenkins/jenkins.war --webroot=/var/cache/jenkins --httpPort=8090[0m
+
+Sep 02 17:43:51 archlinux-rayhan354 jenkins[898]:         at jenkins.security.ImpersonatingExecutorService.lambda$wrap$0(ImpersonatingExecutorService.java:66)
+Sep 02 17:43:51 archlinux-rayhan354 jenkins[898]:         at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+Sep 02 17:43:51 archlinux-rayhan354 jenkins[898]:         at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+Sep 02 17:43:51 archlinux-rayhan354 jenkins[898]:         at java.base/java.lang.Thread.run(Thread.java:1583)
+Sep 02 17:43:51 archlinux-rayhan354 jenkins[898]: 2026-09-02 10:43:51.806+0000 [id=70]        INFO        jenkins.InitReactorRunner$1#onAttained: Completed initialization
+Sep 02 17:43:51 archlinux-rayhan354 jenkins[898]: 2026-09-02 10:43:51.821+0000 [id=51]        INFO        hudson.lifecycle.Lifecycle#onReady: Jenkins is fully up and running
+Sep 02 18:19:08 archlinux-rayhan354 systemd[1]: [0;1;39m[0;1;31m[0;1;39m]8;;file://archlinux-rayhan354/usr/lib/systemd/system/jenkins.service\/usr/lib/systemd/system/jenkins.service]8;;\:9: Standard output type syslog is obsolete, automatically updating to journal. Please update your unit file, and consider removing the setting altogether.[0m
+Sep 02 18:19:08 archlinux-rayhan354 systemd[1]: [0;1;39m[0;1;31m[0;1;39m]8;;file://archlinux-rayhan354/usr/lib/systemd/system/jenkins.service\/usr/lib/systemd/system/jenkins.service]8;;\:10: Standard output type syslog is obsolete, automatically updating to journal. Please update your unit file, and consider removing the setting altogether.[0m
+Sep 02 20:36:09 archlinux-rayhan354 systemd[1]: [0;1;39m[0;1;31m[0;1;39m]8;;file://archlinux-rayhan354/usr/lib/systemd/system/jenkins.service\/usr/lib/systemd/system/jenkins.service]8;;\:9: Standard output type syslog is obsolete, automatically updating to journal. Please update your unit file, and consider removing the setting altogether.[0m
+Sep 02 20:36:09 archlinux-rayhan354 systemd[1]: [0;1;39m[0;1;31m[0;1;39m]8;;file://archlinux-rayhan354/usr/lib/systemd/system/jenkins.service\/usr/lib/systemd/system/jenkins.service]8;;\:10: Standard output type syslog is obsolete, automatically updating to journal. Please update your unit file, and consider removing the setting altogether.[0m
+]3008;end=3a3d82d563ca403abdbcb715eccb24d6\]0;rayhan354@archlinux-rayhan354:/mnt/sdd1/Tes PT Simple Journey Indonesia/shift-test[?2004h[rayhan354@archlinux-rayhan354 shift-test]$ [7msudo ss -tulpn | grep java[27msudo ss -tulpn | grep java
+[?2004ltcp   LISTEN 0      50                                0.0.0.0:8090       0.0.0.0:*    users:(("[01;31m[Kjava[m[K",pid=898,fd=9))
+]0;rayhan354@archlinux-rayhan354:/mnt/sdd1/Tes PT Simple Journey Indonesia/shift-test[?2004h[rayhan354@archlinux-rayhan354 shift-test]$ [7msudo systemctl restart jenkins[27msudo systemctl restart jenkins
+[?2004l[sudo] password for rayhan354: 
+]3008;start=357d24c1924e4e14ad3227f359ccc09a;user=rayhan354;hostname=archlinux-rayhan354;machineid=5ad9b462fcad4429abb6329199b5f486;bootid=515d013d25b643c8bc734b4611a0b586;pid=152776;pidfdid=176515;comm=sudo;targetuser=root;type=session\]3008;end=357d24c1924e4e14ad3227f359ccc09a\]0;rayhan354@archlinux-rayhan354:/mnt/sdd1/Tes PT Simple Journey Indonesia/shift-test[?2004h[rayhan354@archlinux-rayhan354 shift-test]$ [7msudo systemctl status jenkins[27msudo systemctl status jenkins
+[?2004l]3008;start=edcfbe7742c94dbf94d572d96bd03979;user=rayhan354;hostname=archlinux-rayhan354;machineid=5ad9b462fcad4429abb6329199b5f486;bootid=515d013d25b643c8bc734b4611a0b586;pid=153783;pidfdid=172978;comm=sudo;targetuser=root;type=session\[0;1;32m●[0m jenkins.service - Extendable continuous integration server
+     Loaded: loaded (]8;;file://archlinux-rayhan354/usr/lib/systemd/system/jenkins.service\/usr/lib/systemd/system/jenkins.service]8;;\; [0;1;32menabled[0m; preset: [0;1;38:5:185mdisabled[0m)
+     Active: [0;1;32mactive (running)[0m since Wed 2026-09-02 22:03:36 WIB; 2min 47s ago
+ Invocation: 5652c14e3d784614a034b78304df6699
+   Main PID: 152818 (sh)
+      Tasks: 59[0;38:5:245m (limit: 38348)[0m
+     Memory: 406.7M (peak: 667.5M)
+        CPU: 43.056s
+     CGroup: /system.slice/jenkins.service
+             ├─[0;38:5:245m152818 /bin/sh -c "eval \$JENKINS_COMMAND_LINE"[0m
+             └─[0;38:5:245m152819 /usr/lib/jvm/java-21-openjdk/bin/java -Xmx512m -jar /usr/share/java/jenkins/jenkins.war --webroot=/var/cache/jenkins --httpPort=8090[0m
+
+Sep 02 22:04:55 archlinux-rayhan354 jenkins[152819]: 2026-09-02 15:04:55.951+0000 [id=81]        INFO        jenkins.InitReactorRunner$1#onAttained: Prepared all plugins
+Sep 02 22:04:55 archlinux-rayhan354 jenkins[152819]: 2026-09-02 15:04:55.959+0000 [id=78]        INFO        jenkins.InitReactorRunner$1#onAttained: Started all plugins
+Sep 02 22:04:55 archlinux-rayhan354 jenkins[152819]: 2026-09-02 15:04:55.960+0000 [id=72]        INFO        jenkins.InitReactorRunner$1#onAttained: Augmented all extensions
+Sep 02 22:04:56 archlinux-rayhan354 jenkins[152819]: 2026-09-02 15:04:56.066+0000 [id=72]        INFO        h.p.b.g.GlobalTimeOutConfiguration#load: global timeout not set
+Sep 02 22:04:56 archlinux-rayhan354 jenkins[152819]: 2026-09-02 15:04:56.357+0000 [id=80]        INFO        jenkins.InitReactorRunner$1#onAttained: System config loaded
+Sep 02 22:04:56 archlinux-rayhan354 jenkins[152819]: 2026-09-02 15:04:56.357+0000 [id=80]        INFO        jenkins.InitReactorRunner$1#onAttained: System config adapted
+Sep 02 22:04:56 archlinux-rayhan354 jenkins[152819]: 2026-09-02 15:04:56.357+0000 [id=68]        INFO        jenkins.InitReactorRunner$1#onAttained: Loaded all jobs
+Sep 02 22:04:56 archlinux-rayhan354 jenkins[152819]: 2026-09-02 15:04:56.361+0000 [id=65]        INFO        jenkins.InitReactorRunner$1#onAttained: Configuration for all jobs updated
+Sep 02 22:04:56 archlinux-rayhan354 jenkins[152819]: 2026-09-02 15:04:56.382+0000 [id=87]        INFO        jenkins.InitReactorRunner$1#onAttained: Completed initialization
+Sep 02 22:04:56 archlinux-rayhan354 jenkins[152819]: 2026-09-02 15:04:56.400+0000 [id=51]        INFO        hudson.lifecycle.Lifecycle#onReady: Jenkins is fully up and running
+]3008;end=edcfbe7742c94dbf94d572d96bd03979\]0;rayhan354@archlinux-rayhan354:/mnt/sdd1/Tes PT Simple Journey Indonesia/shift-test[?2004h[rayhan354@archlinux-rayhan354 shift-test]$ [7msudo ss -tulpn | grep 8090[27msudo ss -tulpn | grep 8090
+[?2004ltcp   LISTEN 0      50                                      *:[01;31m[K8090[m[K             *:*    users:(("java",pid=152819,fd=9))
+]0;rayhan354@archlinux-rayhan354:/mnt/sdd1/Tes PT Simple Journey Indonesia/shift-test[?2004h[rayhan354@archlinux-rayhan354 shift-test]$ [7msudo journalctl -u jenkins -n 30 --no-pager[27msudo journalctl -u jenkins -n 30 --no-pager
+[?2004l]3008;start=2f159403f25247bba38a80bea187973e;user=rayhan354;hostname=archlinux-rayhan354;machineid=5ad9b462fcad4429abb6329199b5f486;bootid=515d013d25b643c8bc734b4611a0b586;pid=153919;pidfdid=150465;comm=sudo;targetuser=root;type=session\Sep 02 22:04:53 archlinux-rayhan354 jenkins[152819]: 2026-09-02 15:04:53.011+0000 [id=197]        INFO        hudson.lifecycle.Lifecycle#onStatusUpdate: Jenkins stopped
+Sep 02 22:04:53 archlinux-rayhan354 jenkins[152819]: 2026-09-02 15:04:53.366+0000 [id=46]        WARNING        h.s.HttpSessionContextIntegrationFilter2#hasInvalidSessionSeed: Encountered IllegalStateException trying to get a user. System init may not have completed yet. Invalidating user session.
+Sep 02 22:04:53 archlinux-rayhan354 jenkins[152819]: Running from: /usr/share/java/jenkins/jenkins.war
+Sep 02 22:04:53 archlinux-rayhan354 jenkins[152819]: 2026-09-02 15:04:53.682+0000 [id=1]        INFO        winstone.Logger#logInternal: Beginning extraction from war file
+Sep 02 22:04:53 archlinux-rayhan354 jenkins[152819]: 2026-09-02 15:04:53.724+0000 [id=1]        WARNING        o.e.j.ee9.nested.ContextHandler#setContextPath: Empty contextPath
+Sep 02 22:04:53 archlinux-rayhan354 jenkins[152819]: 2026-09-02 15:04:53.758+0000 [id=1]        INFO        org.eclipse.jetty.server.Server#doStart: jetty-12.1.12; built: 2026-08-03T22:37:55.389Z; git: 10dd3948f37767b84cc2c62358364f042e51dbbe; jvm 21.0.12.1+1
+Sep 02 22:04:53 archlinux-rayhan354 jenkins[152819]: 2026-09-02 15:04:53.969+0000 [id=1]        INFO        o.e.j.e.w.StandardDescriptorProcessor#visitServlet: NO JSP Support for /, did not find org.eclipse.jetty.ee9.jsp.JettyJspServlet
+Sep 02 22:04:54 archlinux-rayhan354 jenkins[152819]: 2026-09-02 15:04:54.005+0000 [id=1]        INFO        o.e.j.s.DefaultSessionIdManager#doStart: Session workerName=node0
+Sep 02 22:04:54 archlinux-rayhan354 jenkins[152819]: SLF4J(E): A service provider failed to instantiate:
+Sep 02 22:04:54 archlinux-rayhan354 jenkins[152819]: org.slf4j.spi.SLF4JServiceProvider: org.slf4j.simple.SimpleServiceProvider not a subtype
+Sep 02 22:04:54 archlinux-rayhan354 jenkins[152819]: SLF4J(E): A service provider failed to instantiate:
+Sep 02 22:04:54 archlinux-rayhan354 jenkins[152819]: org.slf4j.spi.SLF4JServiceProvider: org.slf4j.nop.NOPServiceProvider not a subtype
+Sep 02 22:04:54 archlinux-rayhan354 jenkins[152819]: 2026-09-02 15:04:54.185+0000 [id=1]        INFO        hudson.WebAppMain#contextInitialized: Jenkins home directory: /var/lib/jenkins found at: EnvVars.masterEnvVars.get("JENKINS_HOME")
+Sep 02 22:04:54 archlinux-rayhan354 jenkins[152819]: 2026-09-02 15:04:54.246+0000 [id=1]        INFO        o.e.j.s.handler.ContextHandler#doStart: Started oeje9n.ContextHandler$CoreContextHandler@2a3a299{Jenkins v2.579,/,b=file:///var/cache/jenkins/,a=AVAILABLE,h=oeje9n.ContextHandler$CoreContextHandler$CoreToNestedHandler@7da10b5b{STARTED}}
+Sep 02 22:04:54 archlinux-rayhan354 jenkins[152819]: 2026-09-02 15:04:54.251+0000 [id=1]        INFO        o.e.j.server.AbstractConnector#doStart: Started oejs.ServerConnector@67fe380b{HTTP/1.1, (http/1.1)}{0.0.0.0:8090}
+Sep 02 22:04:54 archlinux-rayhan354 jenkins[152819]: 2026-09-02 15:04:54.251+0000 [id=1]        INFO        org.eclipse.jetty.server.Server#doStart: Started oejs.Server@4a325eb9{STARTING}[12.1.12,sto=0] @495ms
+Sep 02 22:04:54 archlinux-rayhan354 jenkins[152819]: 2026-09-02 15:04:54.252+0000 [id=55]        INFO        winstone.Logger#logInternal: Winstone Servlet Engine running: controlPort=disabled
+Sep 02 22:04:54 archlinux-rayhan354 jenkins[152819]: 2026-09-02 15:04:54.305+0000 [id=51]        INFO        jenkins.model.Jenkins#<init>: Starting version 2.579
+Sep 02 22:04:54 archlinux-rayhan354 jenkins[152819]: 2026-09-02 15:04:54.344+0000 [id=62]        INFO        jenkins.InitReactorRunner$1#onAttained: Started initialization
+Sep 02 22:04:54 archlinux-rayhan354 jenkins[152819]: 2026-09-02 15:04:54.484+0000 [id=90]        INFO        jenkins.InitReactorRunner$1#onAttained: Listed all plugins
+Sep 02 22:04:55 archlinux-rayhan354 jenkins[152819]: 2026-09-02 15:04:55.951+0000 [id=81]        INFO        jenkins.InitReactorRunner$1#onAttained: Prepared all plugins
+Sep 02 22:04:55 archlinux-rayhan354 jenkins[152819]: 2026-09-02 15:04:55.959+0000 [id=78]        INFO        jenkins.InitReactorRunner$1#onAttained: Started all plugins
+Sep 02 22:04:55 archlinux-rayhan354 jenkins[152819]: 2026-09-02 15:04:55.960+0000 [id=72]        INFO        jenkins.InitReactorRunner$1#onAttained: Augmented all extensions
+Sep 02 22:04:56 archlinux-rayhan354 jenkins[152819]: 2026-09-02 15:04:56.066+0000 [id=72]        INFO        h.p.b.g.GlobalTimeOutConfiguration#load: global timeout not set
+Sep 02 22:04:56 archlinux-rayhan354 jenkins[152819]: 2026-09-02 15:04:56.357+0000 [id=80]        INFO        jenkins.InitReactorRunner$1#onAttained: System config loaded
+Sep 02 22:04:56 archlinux-rayhan354 jenkins[152819]: 2026-09-02 15:04:56.357+0000 [id=80]        INFO        jenkins.InitReactorRunner$1#onAttained: System config adapted
+Sep 02 22:04:56 archlinux-rayhan354 jenkins[152819]: 2026-09-02 15:04:56.357+0000 [id=68]        INFO        jenkins.InitReactorRunner$1#onAttained: Loaded all jobs
+Sep 02 22:04:56 archlinux-rayhan354 jenkins[152819]: 2026-09-02 15:04:56.361+0000 [id=65]        INFO        jenkins.InitReactorRunner$1#onAttained: Configuration for all jobs updated
+Sep 02 22:04:56 archlinux-rayhan354 jenkins[152819]: 2026-09-02 15:04:56.382+0000 [id=87]        INFO        jenkins.InitReactorRunner$1#onAttained: Completed initialization
+Sep 02 22:04:56 archlinux-rayhan354 jenkins[152819]: 2026-09-02 15:04:56.400+0000 [id=51]        INFO        hudson.lifecycle.Lifecycle#onReady: Jenkins is fully up and running
+]3008;end=2f159403f25247bba38a80bea187973e\]0;rayhan354@archlinux-rayhan354:/mnt/sdd1/Tes PT Simple Journey Indonesia/shift-test[?2004h[rayhan354@archlinux-rayhan354 shift-test]$ [7msudo systemctl status jenkins[27msudo systemctl status jenkins
+[?2004l]3008;start=4d8235eb3fb1477cbad6f94663ead6dd;user=rayhan354;hostname=archlinux-rayhan354;machineid=5ad9b462fcad4429abb6329199b5f486;bootid=515d013d25b643c8bc734b4611a0b586;pid=154767;pidfdid=160857;comm=sudo;targetuser=root;type=session\[0;1;32m●[0m jenkins.service - Extendable continuous integration server
+     Loaded: loaded (]8;;file://archlinux-rayhan354/usr/lib/systemd/system/jenkins.service\/usr/lib/systemd/system/jenkins.service]8;;\; [0;1;32menabled[0m; preset: [0;1;38:5:185mdisabled[0m)
+     Active: [0;1;32mactive (running)[0m since Wed 2026-09-02 22:03:36 WIB; 6min ago
+ Invocation: 5652c14e3d784614a034b78304df6699
+   Main PID: 152818 (sh)
+      Tasks: 61[0;38:5:245m (limit: 38348)[0m
+     Memory: 435.9M (peak: 667.5M)
+        CPU: 46.488s
+     CGroup: /system.slice/jenkins.service
+             ├─[0;38:5:245m152818 /bin/sh -c "eval \$JENKINS_COMMAND_LINE"[0m
+             └─[0;38:5:245m152819 /usr/lib/jvm/java-21-openjdk/bin/java -Xmx512m -jar /usr/share/java/jenkins/jenkins.war --webroot=/var/cache/jenkins --httpPort=8090[0m
+
+Sep 02 22:04:55 archlinux-rayhan354 jenkins[152819]: 2026-09-02 15:04:55.951+0000 [id=81]        INFO        jenkins.InitReactorRunner$1#onAttained: Prepared all plugins
+Sep 02 22:04:55 archlinux-rayhan354 jenkins[152819]: 2026-09-02 15:04:55.959+0000 [id=78]        INFO        jenkins.InitReactorRunner$1#onAttained: Started all plugins
+Sep 02 22:04:55 archlinux-rayhan354 jenkins[152819]: 2026-09-02 15:04:55.960+0000 [id=72]        INFO        jenkins.InitReactorRunner$1#onAttained: Augmented all extensions
+Sep 02 22:04:56 archlinux-rayhan354 jenkins[152819]: 2026-09-02 15:04:56.066+0000 [id=72]        INFO        h.p.b.g.GlobalTimeOutConfiguration#load: global timeout not set
+Sep 02 22:04:56 archlinux-rayhan354 jenkins[152819]: 2026-09-02 15:04:56.357+0000 [id=80]        INFO        jenkins.InitReactorRunner$1#onAttained: System config loaded
+Sep 02 22:04:56 archlinux-rayhan354 jenkins[152819]: 2026-09-02 15:04:56.357+0000 [id=80]        INFO        jenkins.InitReactorRunner$1#onAttained: System config adapted
+Sep 02 22:04:56 archlinux-rayhan354 jenkins[152819]: 2026-09-02 15:04:56.357+0000 [id=68]        INFO        jenkins.InitReactorRunner$1#onAttained: Loaded all jobs
+Sep 02 22:04:56 archlinux-rayhan354 jenkins[152819]: 2026-09-02 15:04:56.361+0000 [id=65]        INFO        jenkins.InitReactorRunner$1#onAttained: Configuration for all jobs updated
+Sep 02 22:04:56 archlinux-rayhan354 jenkins[152819]: 2026-09-02 15:04:56.382+0000 [id=87]        INFO        jenkins.InitReactorRunner$1#onAttained: Completed initialization
+Sep 02 22:04:56 archlinux-rayhan354 jenkins[152819]: 2026-09-02 15:04:56.400+0000 [id=51]        INFO        hudson.lifecycle.Lifecycle#onReady: Jenkins is fully up and running
+]3008;end=4d8235eb3fb1477cbad6f94663ead6dd\]0;rayhan354@archlinux-rayhan354:/mnt/sdd1/Tes PT Simple Journey Indonesia/shift-test[?2004h[rayhan354@archlinux-rayhan354 shift-test]$ [7mgit add Jenkinsfile[27mgit add Jenkinsfile
+[?2004l]0;rayhan354@archlinux-rayhan354:/mnt/sdd1/Tes PT Simple Journey Indonesia/shift-test[?2004h[rayhan354@archlinux-rayhan354 shift-test]$ [7mgit commit -m "Add Jenkinsfile with CI/CD pipeline"[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgit commit -m "Add Jenkinsfile with CI/CD pipeline"[1@i[1@n[1@g
+[?2004l[main 52937ce] Adding Jenkinsfile with CI/CD pipeline
+ 1 file changed, 133 insertions(+)
+ create mode 100644 Jenkinsfile
+]0;rayhan354@archlinux-rayhan354:/mnt/sdd1/Tes PT Simple Journey Indonesia/shift-test[?2004h[rayhan354@archlinux-rayhan354 shift-test]$ [7mgit push origin main[27mgit push origin main
+[?2004lUsername for 'https://github.com': rayhan354
+Password for 'https://rayhan354@github.com': 
+Enumerating objects: 4, done.
+Counting objects:  25% (1/4)Counting objects:  50% (2/4)Counting objects:  75% (3/4)Counting objects: 100% (4/4)Counting objects: 100% (4/4), done.
+Delta compression using up to 16 threads
+Compressing objects:  33% (1/3)Compressing objects:  66% (2/3)Compressing objects: 100% (3/3)Compressing objects: 100% (3/3), done.
+Writing objects:  33% (1/3)Writing objects:  66% (2/3)Writing objects: 100% (3/3)Writing objects: 100% (3/3), 1.68 KiB | 1.68 MiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/rayhan354/technical-test-shift-engineer.git
+   7c170cf..52937ce  main -> main
+]0;rayhan354@archlinux-rayhan354:/mnt/sdd1/Tes PT Simple Journey Indonesia/shift-test[?2004h[rayhan354@archlinux-rayhan354 shift-test]$ [7mecho 'module shift-test[27m
+
+[7mgo 1.21' > go.mod[27m
+
+[7mgit add go.mod[27m
+[7mgit commit -m "Add go.mod for testing"[27m
+[7mgit push origin main[27m[A[A[A[A[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cecho 'module shift-test
+
+go 1.21' > go.mod
+
+git add go.mod
+git commit -m "Add go.mod for testing"
+git push origin main
+[?2004lThe following paths are ignored by one of your .gitignore files:
+go.mod
+[33mhint: Use -f if you really want to add them.[m
+[33mhint: Disable this message with "git config set advice.addIgnoredFile false"[m
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	[31m.gitignore[m
+	[31m.readme-1-2.md.kate-swp[m
+	[31mreadme-1-2.md[m
+	[31mreadme-1.md[m
+	[31mreadme-2.md[m
+	[31mtest.go.old[m
+
+nothing added to commit but untracked files present (use "git add" to track)
+Username for 'https://github.com': rayhan354
+Password for 'https://rayhan354@github.com': 
+Everything up-to-date
+]0;rayhan354@archlinux-rayhan354:/mnt/sdd1/Tes PT Simple Journey Indonesia/shift-test[?2004h[rayhan354@archlinux-rayhan354 shift-test]$ [7mgit add Jenkinsfile go.mod[27m
+[7mgit commit -m "Fix pipeline: add go.mod and global commitHash"[27m
+[7mgit push origin main[27m[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgit add Jenkinsfile go.mod
+git commit -m "Fix pipeline: add go.mod and global commitHash"
+git push origin main
+[?2004lThe following paths are ignored by one of your .gitignore files:
+go.mod
+[33mhint: Use -f if you really want to add them.[m
+[33mhint: Disable this message with "git config set advice.addIgnoredFile false"[m
+[main ab3f488] Fix pipeline: add go.mod and global commitHash
+ 1 file changed, 13 insertions(+), 39 deletions(-)
+Username for 'https://github.com': rayhan354
+Password for 'https://rayhan354@github.com': 
+Enumerating objects: 5, done.
+Counting objects:  20% (1/5)Counting objects:  40% (2/5)Counting objects:  60% (3/5)Counting objects:  80% (4/5)Counting objects: 100% (5/5)Counting objects: 100% (5/5), done.
+Delta compression using up to 16 threads
+Compressing objects:  33% (1/3)Compressing objects:  66% (2/3)Compressing objects: 100% (3/3)Compressing objects: 100% (3/3), done.
+Writing objects:  33% (1/3)Writing objects:  66% (2/3)Writing objects: 100% (3/3)Writing objects: 100% (3/3), 643 bytes | 643.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+[Kremote: Resolving deltas:  50% (1/2)[Kremote: Resolving deltas: 100% (2/2)[Kremote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/rayhan354/technical-test-shift-engineer.git
+   52937ce..ab3f488  main -> main
+]0;rayhan354@archlinux-rayhan354:/mnt/sdd1/Tes PT Simple Journey Indonesia/shift-test[?2004h[rayhan354@archlinux-rayhan354 shift-test]$ [7mgit add Jenkinsfile[27m
+[7mgit commit -m "Fix pipeline: use env.commitHash for global variable"[27m
+[7mgit push origin main[27m[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgit add Jenkinsfile
+git commit -m "Fix pipeline: use env.commitHash for global variable"
+git push origin main
+[?2004l[main 52b98bc] Fix pipeline: use env.commitHash for global variable
+ 1 file changed, 15 insertions(+), 19 deletions(-)
+Username for 'https://github.com': ^C
+]0;rayhan354@archlinux-rayhan354:/mnt/sdd1/Tes PT Simple Journey Indonesia/shift-test[?2004h[rayhan354@archlinux-rayhan354 shift-test]$ [7mgit add Jenkinsfile[27m
+[7mgit commit -m "Fix pipeline: use env.commitHash for global variable"[27m
+[7mgit push origin main[27m[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgit add Jenkinsfile
+git commit -m "Fix pipeline: use env.commitHash for global variable"
+git push origin main
+[?2004lOn branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	[31m.gitignore[m
+	[31mreadme-1-2.md[m
+	[31mreadme-1.md[m
+	[31mreadme-2.md[m
+	[31mtest.go.old[m
+
+nothing added to commit but untracked files present (use "git add" to track)
+Username for 'https://github.com': rayhan354
+Password for 'https://rayhan354@github.com': 
+Enumerating objects: 5, done.
+Counting objects:  20% (1/5)Counting objects:  40% (2/5)Counting objects:  60% (3/5)Counting objects:  80% (4/5)Counting objects: 100% (5/5)Counting objects: 100% (5/5), done.
+Delta compression using up to 16 threads
+Compressing objects:  33% (1/3)Compressing objects:  66% (2/3)Compressing objects: 100% (3/3)Compressing objects: 100% (3/3), done.
+Writing objects:  33% (1/3)Writing objects:  66% (2/3)Writing objects: 100% (3/3)Writing objects: 100% (3/3), 649 bytes | 649.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+[Kremote: Resolving deltas:   0% (0/2)[Kremote: Resolving deltas:  50% (1/2)[Kremote: Resolving deltas: 100% (2/2)[Kremote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/rayhan354/technical-test-shift-engineer.git
+   ab3f488..52b98bc  main -> main
+]0;rayhan354@archlinux-rayhan354:/mnt/sdd1/Tes PT Simple Journey Indonesia/shift-test[?2004h[rayhan354@archlinux-rayhan354 shift-test]$ git push origin maincommit -m "Fix pipeline: use env.commitHash for global variable"[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cadd Jenkinsfile[K[K[K[K[K[K[K[K[K[K[K[Kgo.mod
+[?2004lThe following paths are ignored by one of your .gitignore files:
+go.mod
+[33mhint: Use -f if you really want to add them.[m
+[33mhint: Disable this message with "git config set advice.addIgnoredFile false"[m
+]0;rayhan354@archlinux-rayhan354:/mnt/sdd1/Tes PT Simple Journey Indonesia/shift-test[?2004h[rayhan354@archlinux-rayhan354 shift-test]$ git add go.mod[Kgit add go.mod -f
+[?2004l]0;rayhan354@archlinux-rayhan354:/mnt/sdd1/Tes PT Simple Journey Indonesia/shift-test[?2004h[rayhan354@archlinux-rayhan354 shift-test]$ git add go.mod -f[Kpush origin maincommit -m "Fix pipeline: use env.commitHash for global variable"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"F"o"r"g"o"t" "t"o" "a"d"d" "g"o"."m"o"d" "t"o"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"g"o"."m"o"d" "w"a"s" "i"g"n"o"r"e"d"." "a"d"d"i"n"g" "[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"," "a"d"d"i"n"g" "i"t" "a"n"y"w"a"y"."."."
+[?2004l[main 3374332] go.mod was ignored, adding it anyway...
+ 1 file changed, 3 insertions(+)
+ create mode 100644 go.mod
+]0;rayhan354@archlinux-rayhan354:/mnt/sdd1/Tes PT Simple Journey Indonesia/shift-test[?2004h[rayhan354@archlinux-rayhan354 shift-test]$ git commit -m "go.mod was ignored, adding it anyway..."[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cadd go.mod -f[K[Kpush origin maincommit -m "Fix pipeline: use env.commitHash for global variable"[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cpush origin main[K[6Padd go.mod -fcommit -m "go.mod was ignored, adding it anyway..."[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Kgit commit -m "go.mod was ignored, adding it anyway..."[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cadd go.mod -f[K[Kpush origin main
+[?2004lUsername for 'https://github.com': rayhan354
+Password for 'https://rayhan354@github.com': 
+Enumerating objects: 4, done.
+Counting objects:  25% (1/4)Counting objects:  50% (2/4)Counting objects:  75% (3/4)Counting objects: 100% (4/4)Counting objects: 100% (4/4), done.
+Delta compression using up to 16 threads
+Compressing objects:  50% (1/2)Compressing objects: 100% (2/2)Compressing objects: 100% (2/2), done.
+Writing objects:  33% (1/3)Writing objects:  66% (2/3)Writing objects: 100% (3/3)Writing objects: 100% (3/3), 304 bytes | 304.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+[Kremote: Resolving deltas:   0% (0/1)[Kremote: Resolving deltas: 100% (1/1)[Kremote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/rayhan354/technical-test-shift-engineer.git
+   52b98bc..3374332  main -> main
+]0;rayhan354@archlinux-rayhan354:/mnt/sdd1/Tes PT Simple Journey Indonesia/shift-test[?2004h[rayhan354@archlinux-rayhan354 shift-test]$ [7msudo usermod -aG docker jenkins[27msudo usermod -aG docker jenkins
+[?2004l[sudo] password for rayhan354: 
+]3008;start=3e60f351b63348aebdfbc970fc3e8b24;user=rayhan354;hostname=archlinux-rayhan354;machineid=5ad9b462fcad4429abb6329199b5f486;bootid=515d013d25b643c8bc734b4611a0b586;pid=167480;pidfdid=174629;comm=sudo;targetuser=root;type=session\]3008;end=3e60f351b63348aebdfbc970fc3e8b24\]0;rayhan354@archlinux-rayhan354:/mnt/sdd1/Tes PT Simple Journey Indonesia/shift-test[?2004h[rayhan354@archlinux-rayhan354 shift-test]$ [7msudo systemctl restart jenkins[27msudo systemctl restart jenkins
+[?2004l]3008;start=d98c2f0ee1fc49919da8227377714862;user=rayhan354;hostname=archlinux-rayhan354;machineid=5ad9b462fcad4429abb6329199b5f486;bootid=515d013d25b643c8bc734b4611a0b586;pid=167569;pidfdid=174639;comm=sudo;targetuser=root;type=session\]3008;end=d98c2f0ee1fc49919da8227377714862\]0;rayhan354@archlinux-rayhan354:/mnt/sdd1/Tes PT Simple Journey Indonesia/shift-test[?2004h[rayhan354@archlinux-rayhan354 shift-test]$ [7msudo -u jenkins docker info[27msudo -u jenkins docker info
+[?2004l]3008;start=fcc885d0c69d4331a8e445351987c8ec;user=rayhan354;hostname=archlinux-rayhan354;machineid=5ad9b462fcad4429abb6329199b5f486;bootid=515d013d25b643c8bc734b4611a0b586;pid=167727;pidfdid=161597;comm=sudo;targetuser=jenkins;type=session\Client:
+ Version:    29.7.2
+ Context:    default
+ Debug Mode: false
+ Plugins:
+  buildx: Docker Buildx (Docker Inc.)
+    Version:  0.36.1
+    Path:     /usr/lib/docker/cli-plugins/docker-buildx
+  compose: Docker Compose (Docker Inc.)
+    Version:  5.5.0
+    Path:     /usr/lib/docker/cli-plugins/docker-compose
+
+Server:
+ Containers: 6
+  Running: 0
+  Paused: 0
+  Stopped: 6
+ Images: 9
+ Server Version: 29.7.2
+ Storage Driver: overlay2
+  Backing Filesystem: extfs
+  Supports d_type: true
+  Using metacopy: true
+  Native Overlay Diff: false
+  userxattr: false
+ Logging Driver: json-file
+ Cgroup Driver: systemd
+ Cgroup Version: 2
+ Plugins:
+  Volume: local
+  Network: bridge host ipvlan macvlan null overlay
+  Log: awslogs fluentd gcplogs gelf journald json-file local splunk syslog
+ CDI spec directories:
+  /etc/cdi
+  /var/run/cdi
+ Swarm: inactive
+ Runtimes: io.containerd.runc.v2 runc
+ Default Runtime: runc
+ Init Binary: docker-init
+ containerd version: db8809540e1a7a9da5d518876894933ff55692ab.m
+ runc version: 
+ init version: de40ad0
+ Security Options:
+  seccomp
+   Profile: builtin
+  cgroupns
+ Kernel Version: 7.2.2-arch1-1
+ Operating System: Arch Linux
+ OSType: linux
+ Architecture: x86_64
+ CPUs: 16
+ Total Memory: 31.26GiB
+ Name: archlinux-rayhan354
+ ID: 68774ef5-f6a5-4c99-a288-ae1d8a0da231
+ Docker Root Dir: /var/lib/docker
+ Debug Mode: false
+ Experimental: false
+ Insecure Registries:
+  127.0.0.0/8
+  ::1/128
+ Live Restore Enabled: false
+ Firewall Backend: iptables+firewalld
+  EnableUserlandProxy: true
+  UserlandProxyPath: /usr/bin/docker-proxy
+
+]3008;end=fcc885d0c69d4331a8e445351987c8ec\]0;rayhan354@archlinux-rayhan354:/mnt/sdd1/Tes PT Simple Journey Indonesia/shift-test[?2004h[rayhan354@archlinux-rayhan354 shift-test]$ # ^[[200~If you're in a hurry and don't mind the security risk, you could make the Docker socket world‑readable/writable (not recommended for production, but okay for a local test):
+[?2004l]0;rayhan354@archlinux-rayhan354:/mnt/sdd1/Tes PT Simple Journey Indonesia/shift-test[?2004h[rayhan354@archlinux-rayhan354 shift-test]$ 
+[?2004l]0;rayhan354@archlinux-rayhan354:/mnt/sdd1/Tes PT Simple Journey Indonesia/shift-test[?2004h[rayhan354@archlinux-rayhan354 shift-test]$ ~# ^[[200~If you're in a hurry and don't mind the security risk, you could make the Docker socket world‑readable/writable (not recommended for production, but okay for a local test):
+[?2004l]0;rayhan354@archlinux-rayhan354:/mnt/sdd1/Tes PT Simple Journey Indonesia/shift-test[?2004h[rayhan354@archlinux-rayhan354 shift-test]$ # [7mIf you're in a hurry and don't mind the security risk, you could make the Docker socket w[27m[7mo[27m[7mrld‑readable/writable (not recommended for production, but okay for a local test): [27m
+
+[A[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[CIf you're in a hurry and don't mind the security risk, you could make the Docker socket world‑readable/writable (not recommended for production, but okay for a local test):
+
+[A
+[?2004l]0;rayhan354@archlinux-rayhan354:/mnt/sdd1/Tes PT Simple Journey Indonesia/shift-test[?2004h[rayhan354@archlinux-rayhan354 shift-test]$ # [7msudo chmod 666 /var/run/docker.sock[27msudo chmod 666 /var/run/docker.sock
+[?2004l]0;rayhan354@archlinux-rayhan354:/mnt/sdd1/Tes PT Simple Journey Indonesia/shift-test[?2004h[rayhan354@archlinux-rayhan354 shift-test]$ # [7mBut this is insecure; you should revert it after the test.[27m
+[7mThe group membership fix is the proper way.[27m
+
+[A[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[CBut this is insecure; you should revert it after the test.
+The group membership fix is the proper way.
+
+[A
+[?2004lbash: The: command not found
+]0;rayhan354@archlinux-rayhan354:/mnt/sdd1/Tes PT Simple Journey Indonesia/shift-test[?2004h[rayhan354@archlinux-rayhan354 shift-test]$ [7mgit add Jenkinsfile[27m
+[7mgit commit -m "Use workspace directory for binary mount to avoid permission issues"[27m
+[7mgit push origin main[27m[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgit add Jenkinsfile
+git commit -m "Use workspace directory for binary mount to avoid permission issues"
+git push origin main
+[?2004l[main 7e97f5d] Use workspace directory for binary mount to avoid permission issues
+ 1 file changed, 27 insertions(+), 12 deletions(-)
+Username for 'https://github.com': rayhan354
+Password for 'https://rayhan354@github.com': 
+Enumerating objects: 5, done.
+Counting objects:  20% (1/5)Counting objects:  40% (2/5)Counting objects:  60% (3/5)Counting objects:  80% (4/5)Counting objects: 100% (5/5)Counting objects: 100% (5/5), done.
+Delta compression using up to 16 threads
+Compressing objects:  33% (1/3)Compressing objects:  66% (2/3)Compressing objects: 100% (3/3)Compressing objects: 100% (3/3), done.
+Writing objects:  33% (1/3)Writing objects:  66% (2/3)Writing objects: 100% (3/3)Writing objects: 100% (3/3), 742 bytes | 742.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+[Kremote: Resolving deltas:   0% (0/2)[Kremote: Resolving deltas:  50% (1/2)[Kremote: Resolving deltas: 100% (2/2)[Kremote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/rayhan354/technical-test-shift-engineer.git
+   3374332..7e97f5d  main -> main
+]0;rayhan354@archlinux-rayhan354:/mnt/sdd1/Tes PT Simple Journey Indonesia/shift-test[?2004h[rayhan354@archlinux-rayhan354 shift-test]$ [7mgit add README.md console-output-success.txt[27mgit add README.md console-output-success.txt
+[?2004l]0;rayhan354@archlinux-rayhan354:/mnt/sdd1/Tes PT Simple Journey Indonesia/shift-test[?2004h[rayhan354@archlinux-rayhan354 shift-test]$ [7mgit commit -m "Add final README and pipeline success log"[27m
+[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgit commit -m "Add final README and pipeline success log"
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[?2004l[main ab8bf47] Add final README and pipeline success log
+ 2 files changed, 490 insertions(+)
+ create mode 100644 README.md
+ create mode 100644 console-output-success.txt
+]0;rayhan354@archlinux-rayhan354:/mnt/sdd1/Tes PT Simple Journey Indonesia/shift-test[?2004h[rayhan354@archlinux-rayhan354 shift-test]$ [7mgit push origin main[27mgit push origin main
+[?2004lUsername for 'https://github.com': rayhan354
+Password for 'https://rayhan354@github.com': 
+Enumerating objects: 5, done.
+Counting objects:  20% (1/5)Counting objects:  40% (2/5)Counting objects:  60% (3/5)Counting objects:  80% (4/5)Counting objects: 100% (5/5)Counting objects: 100% (5/5), done.
+Delta compression using up to 16 threads
+Compressing objects:  25% (1/4)Compressing objects:  50% (2/4)Compressing objects:  75% (3/4)Compressing objects: 100% (4/4)Compressing objects: 100% (4/4), done.
+Writing objects:  25% (1/4)Writing objects:  50% (2/4)Writing objects:  75% (3/4)Writing objects: 100% (4/4)Writing objects: 100% (4/4), 5.34 KiB | 5.34 MiB/s, done.
+Total 4 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+[Kremote: Resolving deltas:   0% (0/1)[Kremote: Resolving deltas: 100% (1/1)[Kremote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/rayhan354/technical-test-shift-engineer.git
+   7e97f5d..ab8bf47  main -> main
+]0;rayhan354@archlinux-rayhan354:/mnt/sdd1/Tes PT Simple Journey Indonesia/shift-test[?2004h[rayhan354@archlinux-rayhan354 shift-test]$ git push origin maincommit -m "Add final README and pipeline success log"[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[13Padd README.md console-output-success.txt[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kpipeline-success.png
+[?2004l]0;rayhan354@archlinux-rayhan354:/mnt/sdd1/Tes PT Simple Journey Indonesia/shift-test[?2004h[rayhan354@archlinux-rayhan354 shift-test]$ git add pipeline-success.png[8Ppush origin maincommit -m "Add final README and pipeline success log"[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[13Padd README.md console-output-success.txtcommit -m "Add final README and pipeline success log"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"t"h"e" "s"u"c"c"e"s"s" "p"i"p"e"l"i"n"e" "s"c"r"e"e"[1P"e"n"s"h"i"[1P"o"t"[C
+[?2004l[main da2d798] Add the success pipeline screenshot
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 pipeline-success.png
+]0;rayhan354@archlinux-rayhan354:/mnt/sdd1/Tes PT Simple Journey Indonesia/shift-test[?2004h[rayhan354@archlinux-rayhan354 shift-test]$ git commit -m "Add the success pipeline screenshot"[23Padd pipeline-success.png[8Ppush origin main
+[?2004lUsername for 'https://github.com': rayhan354
+Password for 'https://rayhan354@github.com': 
+Enumerating objects: 4, done.
+Counting objects:  25% (1/4)Counting objects:  50% (2/4)Counting objects:  75% (3/4)Counting objects: 100% (4/4)Counting objects: 100% (4/4), done.
+Delta compression using up to 16 threads
+Compressing objects:  33% (1/3)Compressing objects:  66% (2/3)Compressing objects: 100% (3/3)Compressing objects: 100% (3/3), done.
+Writing objects:  33% (1/3)Writing objects:  66% (2/3)Writing objects: 100% (3/3)Writing objects: 100% (3/3), 83.88 KiB | 41.94 MiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/rayhan354/technical-test-shift-engineer.git
+   ab8bf47..da2d798  main -> main
+]0;rayhan354@archlinux-rayhan354:/mnt/sdd1/Tes PT Simple Journey Indonesia/shift-test[?2004h[rayhan354@archlinux-rayhan354 shift-test]$ git push origin maincommit -m "Add the success pipeline screenshot"[23Padd pipeline-success.png[8Ppush origin maincommit -m "Add final README and pipeline success log"[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[13Padd README.md console-output-success.txt[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K
+[?2004l]0;rayhan354@archlinux-rayhan354:/mnt/sdd1/Tes PT Simple Journey Indonesia/shift-test[?2004h[rayhan354@archlinux-rayhan354 shift-test]$ git add README.mdpush origin maincommit -m "Add the success pipeline screenshot"[23Padd pipeline-success.png[8Ppush origin maincommit -m "Add final README and pipeline success log"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[C[1P[1P[1P[1P[1P[1P[1P[1P[1P[C[1P[C[C[C[1@M[1@o[1@r[1@e[1@ [1P[1P[1P[1P[1P[C[C[C[C[C[C[1P"[1P"[1P"[1P"[1P"[1P"R"e"p"l"a"c"i"n"g" "R"E"A"D"M"E"."m"d" "w"i"t"h" "t"h"[1P"[1P"a" "[1P"[1P"t"h"i"s" "o"n"e" "[1P"." "F"u"r"t"h"e"r" "[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P" "a"b"o"u"t" "p"o"r"t" "8"0"9"0" "i"n" "J"e"n"k"i"n"s"."[C[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1@A[1@d[1@d[1@i[1@n[1@g[1@ [1@d[1@e[1@t[C[1@a[1@i[1@l[1@s[1@ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[?2004l[main 4d4ba17] Adding details about port 8090 in Jenkins.
+ 1 file changed, 12 insertions(+), 13 deletions(-)
+]0;rayhan354@archlinux-rayhan354:/mnt/sdd1/Tes PT Simple Journey Indonesia/shift-test[?2004h[rayhan354@archlinux-rayhan354 shift-test]$ git commit -m "Adding details about port 8090 in Jenkins."[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cadd README.md[Kpush origin maincommit -m "Add the success pipeline screenshot"[23Padd pipeline-success.png[8Ppush origin mainadd pipeline-success.pngcommit -m "Add the success pipeline screenshot"[23Padd pipeline-success.png[8Ppush origin mainadd pipeline-success.pngcommit -m "Add the success pipeline screenshot"[31Ppush origin main[3Padd README.mdcommit -m "Adding details about port 8090 in Jenkins."[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Kgit commit -m "Adding details about port 8090 in Jenkins."[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cadd README.md[Kpush origin maincommit -m "Add the success pipeline screenshot"[23Padd pipeline-success.png[8Ppush origin maincommit -m "Add final README and pipeline success log"[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[13Padd README.md console-output-success.txt[24Ppush origin mainadd README.md console-output-success.txtcommit -m "Add final README and pipeline success log"[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cpush origin main[K
+[?2004lUsername for 'https://github.com': rayhan354
+Password for 'https://rayhan354@github.com': 
+Enumerating objects: 5, done.
+Counting objects:  20% (1/5)Counting objects:  40% (2/5)Counting objects:  60% (3/5)Counting objects:  80% (4/5)Counting objects: 100% (5/5)Counting objects: 100% (5/5), done.
+Delta compression using up to 16 threads
+Compressing objects:  33% (1/3)Compressing objects:  66% (2/3)Compressing objects: 100% (3/3)Compressing objects: 100% (3/3), done.
+Writing objects:  33% (1/3)Writing objects:  66% (2/3)Writing objects: 100% (3/3)Writing objects: 100% (3/3), 795 bytes | 795.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+[Kremote: Resolving deltas:   0% (0/2)[Kremote: Resolving deltas:  50% (1/2)[Kremote: Resolving deltas: 100% (2/2)[Kremote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/rayhan354/technical-test-shift-engineer.git
+   da2d798..4d4ba17  main -> main
+]0;rayhan354@archlinux-rayhan354:/mnt/sdd1/Tes PT Simple Journey Indonesia/shift-test[?2004h[rayhan354@archlinux-rayhan354 shift-test]$ git push origin maincommit -m "Adding details about port 8090 in Jenkins."[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cadd README.md[K[K[K[K[K[K[K[K[K[K[7mshift-test-session.log[27mshift-test-session.log [7mshift-test-session.log[27mshift-test-session.log[1@-[1@2[C[C[C[C [7mshift-test-session.log[27mshift-test-session.log[1@-[1@3[C[C[C[C
+[?2004lThe following paths are ignored by one of your .gitignore files:
+shift-test-session-2.log
+shift-test-session-3.log
+shift-test-session.log
+[33mhint: Use -f if you really want to add them.[m
+[33mhint: Disable this message with "git config set advice.addIgnoredFile false"[m
+]0;rayhan354@archlinux-rayhan354:/mnt/sdd1/Tes PT Simple Journey Indonesia/shift-test[?2004h[rayhan354@archlinux-rayhan354 shift-test]$ git add shift-test-session.log shift-test-session-2.log shift-test-session-3.log[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Kgit add shift-test-session.log shift-test-session-2.log shift-test-session-3.log
+[?2004l]0;rayhan354@archlinux-rayhan354:/mnt/sdd1/Tes PT Simple Journey Indonesia/shift-test[?2004h[rayhan354@archlinux-rayhan354 shift-test]$ git add shift-test-session.log shift-test-session-2.log shift-test-session-3.log[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cpush origin main[Kcommit -m "Adding details about port 8090 in Jenkins."[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K^C[?2004l[?2004h[?2004l
+]0;rayhan354@archlinux-rayhan354:/mnt/sdd1/Tes PT Simple Journey Indonesia/shift-test[?2004h[rayhan354@archlinux-rayhan354 shift-test]$ exit
+[?2004lexit
+
+Script done on 2026-09-02 23:19:42+07:00 [COMMAND_EXIT_CODE="130"]
