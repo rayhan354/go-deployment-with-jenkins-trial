@@ -2,13 +2,11 @@ pipeline {
     agent any
 
     environment {
-        REGISTRY_URL   = 'docker.io/rayhan354'
+        REGISTRY_URL   = 'docker.io/rayhan354'    // change to your registry
         IMAGE_NAME     = 'myapp'
         REGISTRY_CREDS = 'docker-credentials'
+        // commitHash will be set dynamically in the Build stage
     }
-
-    // Global variable to hold the commit hash
-    def commitHash = ''
 
     stages {
         stage('Test') {
@@ -20,11 +18,12 @@ pipeline {
         stage('Build') {
             steps {
                 script {
-                    // Assign commitHash globally
-                    commitHash = sh(script: 'git rev-parse --short HEAD', returnStdout: true).trim()
+                    // Set commitHash as an environment variable
+                    env.commitHash = sh(script: 'git rev-parse --short HEAD', returnStdout: true).trim()
+
                     sh """
-                        docker build --build-arg VERSION=${commitHash} -t ${IMAGE_NAME}:${commitHash} .
-                        docker tag ${IMAGE_NAME}:${commitHash} ${REGISTRY_URL}/${IMAGE_NAME}:${commitHash}
+                        docker build --build-arg VERSION=${env.commitHash} -t ${env.IMAGE_NAME}:${env.commitHash} .
+                        docker tag ${env.IMAGE_NAME}:${env.commitHash} ${env.REGISTRY_URL}/${env.IMAGE_NAME}:${env.commitHash}
                     """
                 }
             }
@@ -33,9 +32,8 @@ pipeline {
         stage('Push (Simulated)') {
             steps {
                 script {
-                    // (Simulated push – uses commitHash from global scope)
-                    echo "✅ Push stage: would push ${REGISTRY_URL}/${IMAGE_NAME}:${commitHash}"
-                    echo "🔑 Jenkins credential '${REGISTRY_CREDS}' (username/password) would be used."
+                    echo "✅ Push stage: would push ${env.REGISTRY_URL}/${env.IMAGE_NAME}:${env.commitHash}"
+                    echo "🔑 Jenkins credential '${env.REGISTRY_CREDS}' (username/password) would be used."
                 }
             }
         }
@@ -43,11 +41,10 @@ pipeline {
         stage('Deploy') {
             steps {
                 script {
-                    // commitHash is now accessible
                     sh """
-                        docker create --name extract-${commitHash} ${IMAGE_NAME}:${commitHash}
-                        docker cp extract-${commitHash}:/app /tmp/app-bin/app-new
-                        docker rm extract-${commitHash}
+                        docker create --name extract-${env.commitHash} ${env.IMAGE_NAME}:${env.commitHash}
+                        docker cp extract-${env.commitHash}:/app /tmp/app-bin/app-new
+                        docker rm extract-${env.commitHash}
                     """
                     sh """
                         if [ -f /tmp/app-bin/app ]; then
@@ -65,7 +62,7 @@ pipeline {
                             -p 8080:8080 \
                             -v /tmp/app-bin/app:/app \
                             --name myapp \
-                            ${IMAGE_NAME}:${commitHash}
+                            ${env.IMAGE_NAME}:${env.commitHash}
                     """
                     sh """
                         sleep 3
@@ -82,7 +79,6 @@ pipeline {
     post {
         failure {
             script {
-                // commitHash is available here as well
                 echo "🚨 Deploy failed – initiating rollback..."
                 sh """
                     if [ -f /tmp/app-bin/app.bak ]; then
@@ -95,13 +91,13 @@ pipeline {
                         -p 8080:8080 \
                         -v /tmp/app-bin/app:/app \
                         --name myapp \
-                        ${IMAGE_NAME}:${commitHash}
+                        ${env.IMAGE_NAME}:${env.commitHash}
                 """
                 echo "✅ Rollback completed."
             }
         }
         success {
-            echo "⭕️ Pipeline succeeded! New version deployed."
+            echo "🎉 Pipeline succeeded! New version deployed."
         }
     }
 }
