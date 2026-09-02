@@ -1,0 +1,149 @@
+Started by user Rayhan
+Obtained Jenkinsfile from git https://github.com/rayhan354/technical-test-shift-engineer.git
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Running on Jenkins in /var/lib/jenkins/workspace/shift-engineer-pipeline
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Declarative: Checkout SCM)
+[Pipeline] checkout
+Selected Git installation does not exist. Using Default
+The recommended git tool is: NONE
+using credential test-jenkins
+ > git rev-parse --resolve-git-dir /var/lib/jenkins/workspace/shift-engineer-pipeline/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/rayhan354/technical-test-shift-engineer.git # timeout=10
+Fetching upstream changes from https://github.com/rayhan354/technical-test-shift-engineer.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.55.0'
+using GIT_ASKPASS to set credentials 
+ > git fetch --tags --force --progress -- https://github.com/rayhan354/technical-test-shift-engineer.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/main^{commit} # timeout=10
+Checking out Revision 7e97f5d5a5a01a81b400304a37fb5025031662b4 (refs/remotes/origin/main)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 7e97f5d5a5a01a81b400304a37fb5025031662b4 # timeout=10
+Commit message: "Use workspace directory for binary mount to avoid permission issues"
+First time build. Skipping changelog.
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Test)
+[Pipeline] sh
++ go test ./...
+ok  	shift-test	(cached)
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Build)
+[Pipeline] script
+[Pipeline] {
+[Pipeline] sh
++ git rev-parse --short HEAD
+[Pipeline] sh
++ docker build --build-arg VERSION=7e97f5d -t myapp:7e97f5d .
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 451B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/golang:1.21-alpine
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [builder 1/5] FROM docker.io/library/golang:1.21-alpine
+#4 DONE 0.0s
+
+#5 [internal] load build context
+#5 transferring context: 29B done
+#5 DONE 0.0s
+
+#6 [builder 2/5] WORKDIR /app
+#6 CACHED
+
+#7 [builder 3/5] COPY main.go .
+#7 CACHED
+
+#8 [builder 4/5] RUN go mod init app
+#8 CACHED
+
+#9 [builder 5/5] RUN go build -ldflags="-X main.version=7e97f5d" -o app .
+#9 DONE 4.0s
+
+#10 [stage-1 1/1] COPY --from=builder /app/app /app
+#10 DONE 0.0s
+
+#11 exporting to image
+#11 exporting layers 0.0s done
+#11 writing image sha256:99835031d699d5f867c6ce3c918813dc430c53329bdcc064b4f5541a4c21edb0 done
+#11 naming to docker.io/library/myapp:7e97f5d done
+#11 DONE 0.1s
++ docker tag myapp:7e97f5d docker.io/rayhan354/myapp:7e97f5d
+[Pipeline] }
+[Pipeline] // script
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Push (Simulated))
+[Pipeline] script
+[Pipeline] {
+[Pipeline] echo
+✅ Push stage: would push docker.io/rayhan354/myapp:7e97f5d
+[Pipeline] echo
+🔑 Jenkins credential 'docker-credentials' (username/password) would be used.
+[Pipeline] }
+[Pipeline] // script
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Deploy)
+[Pipeline] script
+[Pipeline] {
+[Pipeline] sh
++ mkdir -p /var/lib/jenkins/workspace/shift-engineer-pipeline/app-bin
+[Pipeline] sh
++ docker create --name extract-7e97f5d myapp:7e97f5d
+82be229eeea1fbaea2160fbc721f1d35d74cd4f567980b5d2b17d853d4ddc851
++ docker cp extract-7e97f5d:/app /var/lib/jenkins/workspace/shift-engineer-pipeline/app-bin/app-new
++ docker rm extract-7e97f5d
+extract-7e97f5d
+[Pipeline] sh
++ '[' -f /var/lib/jenkins/workspace/shift-engineer-pipeline/app-bin/app ']'
+[Pipeline] sh
++ mv /var/lib/jenkins/workspace/shift-engineer-pipeline/app-bin/app-new /var/lib/jenkins/workspace/shift-engineer-pipeline/app-bin/app
+[Pipeline] sh
++ docker stop myapp
+myapp
++ docker rm myapp
+myapp
++ docker run -d --restart=unless-stopped -p 8080:8080 -v /var/lib/jenkins/workspace/shift-engineer-pipeline/app-bin/app:/app --name myapp myapp:7e97f5d
+df74bd2befc217bc7814eea7a12e078b0619443a32405c308e8f5812aa241e52
+[Pipeline] sh
++ sleep 3
++ docker ps
++ grep -q myapp
+[Pipeline] }
+[Pipeline] // script
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Declarative: Post Actions)
+[Pipeline] echo
+🎉 Pipeline succeeded! New version deployed.
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Finished: SUCCESS
