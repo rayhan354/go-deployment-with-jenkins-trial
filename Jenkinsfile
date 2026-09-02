@@ -2,10 +2,10 @@ pipeline {
     agent any
 
     environment {
-        REGISTRY_URL   = 'docker.io/rayhan354'    // change to your registry
+        REGISTRY_URL   = 'docker.io/rayhan354'
         IMAGE_NAME     = 'myapp'
         REGISTRY_CREDS = 'docker-credentials'
-        // commitHash will be set dynamically in the Build stage
+        BIN_DIR        = "${env.WORKSPACE}/app-bin"   // use workspace directory
     }
 
     stages {
@@ -18,9 +18,7 @@ pipeline {
         stage('Build') {
             steps {
                 script {
-                    // Set commitHash as an environment variable
                     env.commitHash = sh(script: 'git rev-parse --short HEAD', returnStdout: true).trim()
-
                     sh """
                         docker build --build-arg VERSION=${env.commitHash} -t ${env.IMAGE_NAME}:${env.commitHash} .
                         docker tag ${env.IMAGE_NAME}:${env.commitHash} ${env.REGISTRY_URL}/${env.IMAGE_NAME}:${env.commitHash}
@@ -41,29 +39,43 @@ pipeline {
         stage('Deploy') {
             steps {
                 script {
+                    // Ensure the binary directory exists
+                    sh """
+                        mkdir -p ${env.BIN_DIR}
+                    """
+
+                    // Extract the binary
                     sh """
                         docker create --name extract-${env.commitHash} ${env.IMAGE_NAME}:${env.commitHash}
-                        docker cp extract-${env.commitHash}:/app /tmp/app-bin/app-new
+                        docker cp extract-${env.commitHash}:/app ${env.BIN_DIR}/app-new
                         docker rm extract-${env.commitHash}
                     """
+
+                    // Backup existing binary if present
                     sh """
-                        if [ -f /tmp/app-bin/app ]; then
-                            cp /tmp/app-bin/app /tmp/app-bin/app.bak
+                        if [ -f ${env.BIN_DIR}/app ]; then
+                            cp ${env.BIN_DIR}/app ${env.BIN_DIR}/app.bak
                         fi
                     """
+
+                    // Swap with the new binary
                     sh """
-                        mv /tmp/app-bin/app-new /tmp/app-bin/app
+                        mv ${env.BIN_DIR}/app-new ${env.BIN_DIR}/app
                     """
+
+                    // Restart container with the new binary mounted
                     sh """
                         docker stop myapp || true
                         docker rm myapp || true
                         docker run -d \
                             --restart=unless-stopped \
                             -p 8080:8080 \
-                            -v /tmp/app-bin/app:/app \
+                            -v ${env.BIN_DIR}/app:/app \
                             --name myapp \
                             ${env.IMAGE_NAME}:${env.commitHash}
                     """
+
+                    // Health check
                     sh """
                         sleep 3
                         if ! docker ps | grep -q myapp; then
@@ -81,15 +93,18 @@ pipeline {
             script {
                 echo "🚨 Deploy failed – initiating rollback..."
                 sh """
-                    if [ -f /tmp/app-bin/app.bak ]; then
-                        mv /tmp/app-bin/app.bak /tmp/app-bin/app
+                    # Restore backup if available
+                    if [ -f ${env.BIN_DIR}/app.bak ]; then
+                        mv ${env.BIN_DIR}/app.bak ${env.BIN_DIR}/app
                     fi
+
+                    # Restart container with the restored binary
                     docker stop myapp || true
                     docker rm myapp || true
                     docker run -d \
                         --restart=unless-stopped \
                         -p 8080:8080 \
-                        -v /tmp/app-bin/app:/app \
+                        -v ${env.BIN_DIR}/app:/app \
                         --name myapp \
                         ${env.IMAGE_NAME}:${env.commitHash}
                 """
