@@ -82,6 +82,8 @@ docker build --build-arg VERSION=1.0.0 -t myapp:1.0.0 .
 myapp:1.0.0   6.72MB
 ```
 
+The image is \~6.72 MB because it uses scratch as the final base image. scratch is an empty image (0 bytes). The only content inside is the statically compiled Go binary (/app). The binary itself is \~6.7 MB because it includes the Go runtime, garbage collector, scheduler, and HTTP/networking libraries — all compiled into a single executable.
+
 ---
 
 ## Part II: Deploy & Binary Swap
@@ -141,7 +143,7 @@ Version: 2.0.0
 
 ### Why This Approach Fits a Production Hotfix
 
-> The volume‑mount approach allows swapping the binary by simply replacing a file on the host and restarting the container. This works even with a `scratch`‑based image, requires no extra tooling inside the container, and limits downtime to the restart duration (a few seconds). It also makes rollback trivial – just put back the old binary and restart again. This pattern is common in production when you need to apply a hot‑fix quickly without rebuilding and redeploying the entire image.
+- The volume‑mount approach allows swapping the binary by simply replacing a file on the host and restarting the container. This works even with a `scratch`‑based image, requires no extra tooling inside the container, and limits downtime to the restart duration (a few seconds). It also makes rollback trivial – just put back the old binary and restart again. This pattern is common in production when you need to apply a hot‑fix quickly without rebuilding and redeploying the entire image.
 
 ---
 
@@ -279,14 +281,14 @@ Finished: SUCCESS
 
 ### Rollback Strategy
 
-> **If the deploy stage fails mid‑way**, the pipeline automatically triggers a rollback:
-> 
-> - The previous binary is restored from the backup (`app.bak`).
-> - The container is stopped and removed.
-> - A new container is started with the restored binary mounted, using the same (newly built) image.
-> - This ensures zero configuration drift – the image stays unchanged, and the rollback is as simple as swapping a file and restarting.
-> 
-> **Why this works**: Because the binary is mounted from the host, the container runs the old version even though the image tag is new. This makes rollback fast and reliable.
+**If the deploy stage fails mid‑way**, the pipeline automatically triggers a rollback:
+
+- The previous binary is restored from the backup (`app.bak`).
+- The container is stopped and removed.
+- A new container is started with the restored binary mounted, using the same (newly built) image.
+- This ensures zero configuration drift – the image stays unchanged, and the rollback is as simple as swapping a file and restarting.
+
+**Why this works**: Because the binary is mounted from the host, the container runs the old version even though the image tag is new. This makes rollback fast and reliable.
 
 ### Jenkins Credentials
 
@@ -303,7 +305,7 @@ Finished: SUCCESS
 | :--- | :--- |
 | **`DockerFile` vs `Dockerfile`** – case sensitivity | Renamed to `Dockerfile`. |
 | **Missing `go.mod`** – Go 1.21+ requires modules | Added `RUN go mod init app` in Dockerfile and committed `go.mod`. |
-| **Port 8080 in use** – stale `docker-proxy` | Stopped and removed conflicting container. |
+| **Port 8080 in use** – stale `docker-proxy` | The Go app and Jenkins both default to port 8080. Because the Go app was running first, Jenkins automatically moved to port 8090 (configured in /etc/conf.d/jenkins). Later, a stale docker-proxy process (leftover from a previous container) blocked the Go app from restarting on 8080. Stopping and removing the conflicting container freed the port, allowing the Go app to bind to 8080 again. |
 | **Mullvad VPN blocking Docker traffic** | Used `mullvad lan set allow` or temporarily disabled kill‑switch. |
 | **Docker permission denied** in Jenkins | Added `jenkins` user to `docker` group and restarted Jenkins. |
 | **`docker cp` permission denied** to `/tmp/app-bin` | Switched to workspace directory (`${env.WORKSPACE}/app-bin`) for binary mounts. |
@@ -336,6 +338,3 @@ shift-test/
 ---
 
 **Repository URL**: https://github.com/rayhan354/technical-test-shift-engineer
-```
-
----
