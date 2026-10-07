@@ -325,16 +325,4 @@ shift-test/
 └── README.md
 ```
 
----
-
-## Submission Checklist
-
-- ✔️ All code, Dockerfile, and Jenkinsfile pushed to GitHub.
-- ✔️ Collaborator `admin@simplejourney.co.id` invited to the repository.
-- ✔️ README.md includes build, run, deploy instructions, and write-ups.
-- ✔️ Screenshot/log of successful pipeline run included.
-- ✔️ Rollback strategy documented.
-
----
-
 **Repository URL**: https://github.com/rayhan354/technical-test-shift-engineer
