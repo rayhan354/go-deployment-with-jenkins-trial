@@ -17,7 +17,6 @@ This repository contains a simple Go HTTP server built, containerized, and deplo
 
 - **OS**: Arch Linux
 - **Tools**: Git, Docker, Go, curl, Jenkins
-- **Project Path**: `/mnt/sdd1/Tes PT Simple Journey Indonesia/shift-test/`
 
 ### Application Code (`main.go`)
 
